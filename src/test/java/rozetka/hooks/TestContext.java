@@ -10,8 +10,8 @@ public class TestContext {
     public static WebDriver getDriver(){
         if (driver==null)
         {
-            chromedriver().setup();
-            driver = new ChromeDriver(); //singltone - read.me
+         chromedriver().setup();
+         driver = new ChromeDriver(); //singltone - read.me
             driver.manage().window().maximize();
 
 
@@ -19,7 +19,9 @@ public class TestContext {
         }
         return driver;
     }
-    static void setDriver(WebDriver driver){
-        TestContext.driver = driver;
+   static void setDriver(WebDriver driver){
+       TestContext.driver = driver;
     }
+
 }
+
