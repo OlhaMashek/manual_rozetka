@@ -22,11 +22,12 @@ public class ActionSteps extends BaseStep {
     public void enterInTheSearchFieldClickENTER(String arg0) {
         TestContext.getDriver().findElement(By.xpath("//input[@name='search']")).sendKeys("iPhone 12 Pro Max 256GB", ENTER);
         //sLog4j.logger.info("Searching " + arg0);s
+        TestContext.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @And("Click on the first product found")
     public void clickOnTheFirstProductFound() {
-        TestContext.getDriver().findElement(By.xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[2]/section/rz-grid/ul/li[1]/app-goods-tile-default/div/div[2]")).click();
+        TestContext.getDriver().findElement(By.xpath("//div[@data-goods-id='245162563']")).click();
         TestContext.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
