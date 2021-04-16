@@ -52,6 +52,7 @@ public class ActionSteps extends BaseStep {
     @And("Close the displayed pop-up")
     public void closeTheDisplayedPopUp() {
         TestContext.getDriver().findElement(xpath("//button[@class='modal__close']")).click();
+        WebDriverWait wait = new WebDriverWait(TestContext.getDriver(), 30);
     }
 
 
@@ -73,5 +74,20 @@ public class ActionSteps extends BaseStep {
     @And("Click {string}")
     public void click(String arg0) {
         TestContext.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/auth/div/form/fieldset/div[4]/a")).click();
+    }
+
+    @And("Enter {string} to Last name field")
+    public void enterToLastNameField(String surname) {
+        TestContext.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[2]/input")).sendKeys(surname, INSERT);
+    }
+
+    @And("Enter {string} to Phone number field")
+    public void enterToPhoneNumberField(String number) {
+        TestContext.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[3]/input")).sendKeys(number, INSERT);
+    }
+
+    @And("Enter {string} to password field")
+    public void enterToPasswordField(String password) {
+        TestContext.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[5]/div/input")).sendKeys(password, INSERT);
     }
 }

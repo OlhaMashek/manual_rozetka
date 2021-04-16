@@ -8,7 +8,7 @@ Feature: INCORRECT REGISTRATION
     And Enter "<surname>" to Last name field
     And Enter "<number>" to Phone number field
     And Enter "<password>" to password field
-    And Click "Зарегистрироваться"
+    And Click on icon "Зарегистрироваться"
     Then An error without entering an email is displayed
     Examples:
       | name | surname | number     | password   |
