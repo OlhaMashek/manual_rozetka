@@ -14,8 +14,8 @@ public class CucumberHooks {
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-        driver.manage().timeouts().pageLoadTimeout(2000, TimeUnit.MILLISECONDS);
+       // driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+       // driver.manage().timeouts().pageLoadTimeout(10000, TimeUnit.MILLISECONDS);
         TestContext.setDriver(driver);
     }
 

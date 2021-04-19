@@ -9,9 +9,10 @@ Feature: INCORRECT REGISTRATION
     And Enter "<number>" to Phone number field
     And Enter "<password>" to password field
     And Click on icon "Зарегистрироваться"
-    Then An error without entering an email is displayed
+    Then An error "Введите свою эл. почту" is displayed
+
     Examples:
       | name | surname | number     | password   |
-      | Vlad | Ivanov  | 0972222222 | 1111111111 |
-      | Egor | Morozov | 0982222222 | 2222222222 |
-      | Petr | Petrov  | 0732222222 | 3333333333 |
+      | Влад | Иванов  | 0972222222 | A1111111111a |
+      | Егор | Морозов | 0982222222 | A2222222222a |
+      | Петр | Петров  | 0732222222 | A3333333333a |

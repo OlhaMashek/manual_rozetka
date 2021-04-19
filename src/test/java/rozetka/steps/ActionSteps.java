@@ -1,5 +1,6 @@
 package rozetka.steps;
 
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
@@ -21,26 +22,27 @@ import static org.openqa.selenium.Keys.ENTER;
 import static org.openqa.selenium.Keys.INSERT;
 
 public class ActionSteps extends BaseStep {
-   // private RegistrationPage regstrationPage = new RegistrationPage(TestContext.getDriver());
+    // private RegistrationPage regstrationPage = new RegistrationPage(TestContext.getDriver());
 
     @When("Enter in the search field {string} click ENTER")
     public void enterInTheSearchFieldClickENTER(String arg0) {
         TestContext.getDriver().findElement(xpath("//input[@name='search']")).sendKeys("iPhone 12 Pro Max 256GB", ENTER);
         //sLog4j.logger.info("Searching " + arg0);s
-        TestContext.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        TestContext.getDriver().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
     }
 
     @And("Click on the first product found")
     public void clickOnTheFirstProductFound() {
-        List<WebElement> elementsList = TestContext.getDriver().findElements(xpath("//div[@class='goods-tile__inner']"));//собрали элементы поиска в лист
-        WebDriverWait wait = new WebDriverWait(TestContext.getDriver(), 30);//ждем пока не отобразится попап с товаром добавленным в корзину
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='goods-tile__inner']")));
+        //TestContext.getDriver().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+        List<WebElement> elementsList = TestContext.getDriver().findElements(xpath("//div[@class='goods-tile__inner']"));
+        WebDriverWait wait = new WebDriverWait(TestContext.getDriver(), 5000000);
+        wait.until(ExpectedConditions.visibilityOfAllElements(elementsList));
         elementsList.get(0).click();
-        }
+    }
 
     @And("Check that url contains {string}")
     public void checkThatUrlContains(String arg0) {
-        assertTrue("FAIL: Url not contains "+ arg0,TestContext.getDriver().getCurrentUrl().contains(arg0));
+        assertTrue("FAIL: Url not contains " + arg0, TestContext.getDriver().getCurrentUrl().contains(arg0));
     }
 
     @And("Click on the button {string}")
@@ -58,7 +60,7 @@ public class ActionSteps extends BaseStep {
 
     @And("Enter {string} to Name field")
     public void enterToNameField(String name) {
-        TestContext.getDriver().findElement(xpath("//input[@class='ng-pristine ng-invalid ng-touched']")).sendKeys(name, INSERT);
+        TestContext.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[1]/input")).sendKeys(name, INSERT);
     }
 
     @When("Press on the button {string}")
@@ -89,5 +91,35 @@ public class ActionSteps extends BaseStep {
     @And("Enter {string} to password field")
     public void enterToPasswordField(String password) {
         TestContext.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[5]/div/input")).sendKeys(password, INSERT);
+    }
+
+    @And("Click on icon {string}")
+    public void clickOnIcon(String arg0) {
+        TestContext.getDriver().findElement(xpath("//button[@class='button button_size_large button_color_green auth-modal__submit']")).click();
+    }
+
+    @When("Enter {string} in search field")
+    public void enterInSearchField(String text) {
+        TestContext.getDriver().findElement(xpath("//input[@name='search']")).sendKeys(text, INSERT);
+    }
+
+    @And("Click by the checkbox {string}")
+    public void clickByTheCheckbox(String arg0) {
+        WebElement select = TestContext.getDriver().findElement(xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[1]/div/rz-sort/select"));
+        List<WebElement> options = select.findElements(By.tagName("option"));
+        for (WebElement option : options) {
+            if ("От дорогих к дешевым".equals(option.getText().trim()))
+                option.click();
+        }
+    }
+
+    @And("Press on the checkbox {string}")
+    public void pressOnTheCheckbox(String arg0) {
+        WebElement select = TestContext.getDriver().findElement(xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[1]/div/rz-sort/select"));
+        List<WebElement> options = select.findElements(By.tagName("option"));
+        for (WebElement option : options) {
+            if ("От дешевых к дорогим".equals(option.getText().trim()))
+                option.click();
+        }
     }
 }
