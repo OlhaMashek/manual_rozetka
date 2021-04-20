@@ -1,11 +1,9 @@
-package rozetka.steps;
+package rozetka.stepsdef;
 
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import rozetka.hooks.TestContext;
+import rozetka.config.Config;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -16,7 +14,7 @@ public class AssertionsSteps extends BaseStep {
     @Then("The item with title {string} displayed in the cart")
     public void theItemWithTitleDisplayedInTheCart(String arg0) {
         String actualProductsCountInCart =
-                TestContext.getDriver().findElement(xpath("//button[@class='header__button header__button--active']")).getText();
+                Config.getDriver().findElement(xpath("//button[@class='header__button header__button--active']")).getText();
         assertEquals(actualProductsCountInCart, "1");
 
     }
@@ -25,7 +23,7 @@ public class AssertionsSteps extends BaseStep {
     public void buttonIsDisplayed(String arg0) {
         boolean textFound = false;
         try {
-            TestContext.getDriver().findElement(xpath("//*[contains(text(),'Оформить подписку')]"));
+            Config.getDriver().findElement(xpath("//*[contains(text(),'Оформить подписку')]"));
             textFound = true;
         } catch (Exception e) {
             textFound = false;
@@ -36,7 +34,7 @@ public class AssertionsSteps extends BaseStep {
     public void anErrorIsDisplayed(String arg0) {
         boolean text = false;
         try {
-            TestContext.getDriver().findElement(xpath("//*[contains(text(),'Введите свою эл. почту')]"));
+            Config.getDriver().findElement(xpath("//*[contains(text(),'Введите свою эл. почту')]"));
             text = true;
         } catch (Exception e) {
             text = false;
@@ -47,7 +45,7 @@ public class AssertionsSteps extends BaseStep {
     public void errorIsDisplayed(String arg0) {
         boolean message = false;
         try {
-            TestContext.getDriver().findElement(xpath("//*[contains(text(),'По вашему запросу ничего не найдено. Уточните свой запрос')]"));
+            Config.getDriver().findElement(xpath("//*[contains(text(),'По вашему запросу ничего не найдено. Уточните свой запрос')]"));
             message = true;
         } catch (Exception e) {
             message = false;
@@ -56,7 +54,7 @@ public class AssertionsSteps extends BaseStep {
 
     @Then("Sorting items from expensive to cheap is displayed")
     public void sortingItemsFromExpensiveToCheapIsDisplayed() {
-        List<WebElement> expensiveToCheapList = TestContext.getDriver().findElements(xpath("//p[@class='goods-tile__price-value']"));
+        List<WebElement> expensiveToCheapList = Config.getDriver().findElements(xpath("//p[@class='goods-tile__price-value']"));
         for (int i = 0; i >= 3; i++) {
             System.out.println(expensiveToCheapList.get(i).getText());
             int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
@@ -67,7 +65,7 @@ public class AssertionsSteps extends BaseStep {
 
     @Then("Sorting items from cheap to expensive is displayed")
     public void sortingItemsFromCheapToExpensiveIsDisplayed() {
-        List<WebElement> expensiveToCheapList = TestContext.getDriver().findElements(xpath("//p[@class='goods-tile__price-value']"));
+        List<WebElement> expensiveToCheapList = Config.getDriver().findElements(xpath("//p[@class='goods-tile__price-value']"));
         for (int i = 0; i >= 3; i++) {
             System.out.println(expensiveToCheapList.get(i).getText());
             int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());

@@ -1,13 +1,12 @@
-package rozetka.steps;
+package rozetka.stepsdef;
 import io.cucumber.java.en.Given;
-import org.openqa.selenium.WebDriver;
-import rozetka.hooks.TestContext;
+import rozetka.config.Config;
 
 public class GivenSteps extends BaseStep{
 
 
     @Given("Url of {string} is open")
     public void urlOfIsOpen(String store_url) {
-        TestContext.getDriver().get(store_url);
+        Config.getDriver().get(store_url);
     }
 }

@@ -1,6 +1,4 @@
-package rozetka.steps;
-
-import org.openqa.selenium.WebDriver;
+package rozetka.stepsdef;
 
 public abstract class BaseStep {
     //protected static WebDriver driver;
