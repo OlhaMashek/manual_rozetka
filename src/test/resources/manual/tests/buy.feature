@@ -7,7 +7,6 @@ Feature: BUY
     And Click on the first product found
     # ItemPage.java
     And Click on the Buy button
-    # PopupPage.java
     And Close the displayed pop-up
     # HomePage.java
     Then The item with title "iPhone" displayed in the cart

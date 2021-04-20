@@ -57,7 +57,7 @@ public class AssertionsSteps extends BaseStep {
     @Then("Sorting items from expensive to cheap is displayed")
     public void sortingItemsFromExpensiveToCheapIsDisplayed() {
         List<WebElement> expensiveToCheapList = TestContext.getDriver().findElements(xpath("//p[@class='goods-tile__price-value']"));
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i >= 3; i++) {
             System.out.println(expensiveToCheapList.get(i).getText());
             int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
             int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i+1).getText());
@@ -71,7 +71,7 @@ public class AssertionsSteps extends BaseStep {
         for (int i = 0; i >= 3; i++) {
             System.out.println(expensiveToCheapList.get(i).getText());
             int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
-            int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i+1).getText());
+            int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i-1).getText());
             assert(firstItemPrice>=secondItemPrice);
         }
     }
