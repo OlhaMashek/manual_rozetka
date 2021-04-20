@@ -34,7 +34,7 @@ public class ActionSteps extends BaseStep {
     @And("Click on the first product found")
     public void clickOnTheFirstProductFound() {
         //TestContext.getDriver().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-        List<WebElement> elementsList = TestContext.getDriver().findElements(xpath("//div[@class='goods-tile__inner']"));
+        List<WebElement> elementsList = TestContext.getDriver().findElements(xpath("//a[@class='goods-tile__picture']"));
         WebDriverWait wait = new WebDriverWait(TestContext.getDriver(), 5000000);
         wait.until(ExpectedConditions.visibilityOfAllElements(elementsList));
         elementsList.get(0).click();
@@ -121,5 +121,15 @@ public class ActionSteps extends BaseStep {
             if ("От дешевых к дорогим".equals(option.getText().trim()))
                 option.click();
         }
+    }
+
+    @And("Click on the Buy button")
+    public void clickOnTheBuyButton() {
+        TestContext.getDriver().findElement(xpath("//button[@class='buy-button button button_with_icon button_color_green button_size_large']")).click();
+    }
+
+    @And("Click on the cart button")
+    public void clickOnTheCartButton() {
+        TestContext.getDriver().findElement(xpath("")).click();
     }
 }

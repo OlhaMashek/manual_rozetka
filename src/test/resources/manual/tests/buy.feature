@@ -6,10 +6,8 @@ Feature: BUY
     # SearchPage.java
     And Click on the first product found
     # ItemPage.java
-    And Check that url contains "apple_iphone_12_pro_max_256gb_gold"
-    And Click on the button "Купить"
+    And Click on the Buy button
     # PopupPage.java
     And Close the displayed pop-up
     # HomePage.java
-    And Click on the button "Корзина"
     Then The item with title "iPhone" displayed in the cart

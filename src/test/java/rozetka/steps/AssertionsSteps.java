@@ -56,29 +56,23 @@ public class AssertionsSteps extends BaseStep {
 
     @Then("Sorting items from expensive to cheap is displayed")
     public void sortingItemsFromExpensiveToCheapIsDisplayed() {
-        boolean flag = false;
-        List<WebElement> list = TestContext.getDriver().findElements(xpath("//*[text='От дорогих к дешевым']"));
-        int size = list.size();
-        String[] actual = new String[size];
-        String[] sorted = new String[size];
-
-        for (int i = 0; i < size; i++)
-        {
-            actual[i]=sorted[i] = TestContext.getDriver().findElement(xpath(".//[@id='paymentFormsTabl']//tbody//tr[" + i+ "")).getText();
+        List<WebElement> expensiveToCheapList = TestContext.getDriver().findElements(xpath("//p[@class='goods-tile__price-value']"));
+        for (int i = 0; i <= 3; i++) {
+            System.out.println(expensiveToCheapList.get(i).getText());
+            int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
+            int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i+1).getText());
+            assert(firstItemPrice>=secondItemPrice);
         }
+    }
 
-        //Sorting the array
-        Arrays.sort(sorted);
-
-        //Validating the existing with sorted array. shows no message if both are same
-        for(int i = 0;i<size;i++)
-        {
-            if(!actual[i].equals(sorted[i]))
-            {
-                System.out.println("The elements the webpage are not sorted");
-                System.out.println("expected "+sorted[i]+" but actual "+actual[i]+" at row "+i);
-                flag = true;
-            }
+    @Then("Sorting items from cheap to expensive is displayed")
+    public void sortingItemsFromCheapToExpensiveIsDisplayed() {
+        List<WebElement> expensiveToCheapList = TestContext.getDriver().findElements(xpath("//p[@class='goods-tile__price-value']"));
+        for (int i = 0; i >= 3; i++) {
+            System.out.println(expensiveToCheapList.get(i).getText());
+            int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
+            int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i+1).getText());
+            assert(firstItemPrice>=secondItemPrice);
         }
     }
 }
