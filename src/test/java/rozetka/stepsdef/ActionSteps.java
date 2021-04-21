@@ -56,7 +56,7 @@ public class ActionSteps extends BaseStep {
 
     @And("Enter {string} to Name field")
     public void enterToNameField(String name) {
-        Config.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[1]/input")).sendKeys(name, INSERT);
+        Config.getDriver().findElement(xpath("//input[@formcontrolname='name']")).sendKeys(name, INSERT);
     }
 
     @When("Press on the button {string}")
@@ -66,27 +66,27 @@ public class ActionSteps extends BaseStep {
 
     @When("Click on the icon {string}")
     public void clickOnTheIcon(String arg0) {
-        Config.getDriver().findElement(xpath("/html/body/app-root/div/div[1]/rz-header/header/div/div/ul/li[3]/rz-user/button")).click();
+        Config.getDriver().findElement(xpath("//*[@href='#icon-user-simple']")).click();
     }
 
     @And("Click {string}")
     public void click(String arg0) {
-        Config.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/auth/div/form/fieldset/div[4]/a")).click();
+        Config.getDriver().findElement(xpath("//a[@class='auth-modal__register-link']")).click();
     }
 
     @And("Enter {string} to Last name field")
     public void enterToLastNameField(String surname) {
-        Config.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[2]/input")).sendKeys(surname, INSERT);
+        Config.getDriver().findElement(xpath("//input[@formcontrolname='surname']")).sendKeys(surname, INSERT);
     }
 
     @And("Enter {string} to Phone number field")
     public void enterToPhoneNumberField(String number) {
-        Config.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[3]/input")).sendKeys(number, INSERT);
+        Config.getDriver().findElement(xpath("//input[@formcontrolname='phone']")).sendKeys(number, INSERT);
     }
 
     @And("Enter {string} to password field")
     public void enterToPasswordField(String password) {
-        Config.getDriver().findElement(xpath("/html/body/app-root/single-modal-window/div[2]/div[2]/user-identification/register/div/form/fieldset[5]/div/input")).sendKeys(password, INSERT);
+        Config.getDriver().findElement(xpath("//input[@formcontrolname='password']")).sendKeys(password, INSERT);
     }
 
     @And("Click on icon {string}")
@@ -101,7 +101,7 @@ public class ActionSteps extends BaseStep {
 
     @And("Click by the checkbox {string}")
     public void clickByTheCheckbox(String arg0) {
-        WebElement select = Config.getDriver().findElement(xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[1]/div/rz-sort/select"));
+        WebElement select = Config.getDriver().findElement(xpath("//*[@class='select-css ng-valid ng-dirty ng-touched']"));
         List<WebElement> options = select.findElements(By.tagName("option"));
         for (WebElement option : options) {
             if ("От дорогих к дешевым".equals(option.getText().trim()))
@@ -111,7 +111,7 @@ public class ActionSteps extends BaseStep {
 
     @And("Press on the checkbox {string}")
     public void pressOnTheCheckbox(String arg0) {
-        WebElement select = Config.getDriver().findElement(xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[1]/div/rz-sort/select"));
+        WebElement select = Config.getDriver().findElement(xpath("//*[@class='select-css ng-valid ng-dirty ng-touched']"));
         List<WebElement> options = select.findElements(By.tagName("option"));
         for (WebElement option : options) {
             if ("От дешевых к дорогим".equals(option.getText().trim()))
