@@ -9,10 +9,10 @@ import java.util.List;
 import static org.junit.Assert.*;
 import static org.openqa.selenium.By.xpath;
 
-public class AssertionsSteps extends BaseStep {
+public class AssertionsSteps {
 
     @Then("The item with title {string} displayed in the cart")
-    public void theItemWithTitleDisplayedInTheCart(String arg0) {
+    public void theItemWithTitleDisplayedInTheCart() {
         String actualProductsCountInCart =
                 Config.getDriver().findElement(xpath("//button[@class='header__button header__button--active']")).getText();
         assertEquals(actualProductsCountInCart, "1");
@@ -20,7 +20,7 @@ public class AssertionsSteps extends BaseStep {
     }
 
     @Then("Button {string} is displayed")
-    public void buttonIsDisplayed(String arg0) {
+    public void buttonIsDisplayed() {
         boolean textFound = false;
         try {
             Config.getDriver().findElement(xpath("//*[contains(text(),'Оформить подписку')]"));
@@ -31,7 +31,7 @@ public class AssertionsSteps extends BaseStep {
     }
 
     @Then("An error {string} is displayed")
-    public void anErrorIsDisplayed(String arg0) {
+    public void anErrorIsDisplayed() {
         boolean text = false;
         try {
             Config.getDriver().findElement(xpath("//*[contains(text(),'Введите свою эл. почту')]"));
@@ -42,7 +42,7 @@ public class AssertionsSteps extends BaseStep {
     }
 
     @Then("Error is displayed {string}")
-    public void errorIsDisplayed(String arg0) {
+    public void errorIsDisplayed() {
         boolean message = false;
         try {
             Config.getDriver().findElement(xpath("//*[contains(text(),'По вашему запросу ничего не найдено. Уточните свой запрос')]"));

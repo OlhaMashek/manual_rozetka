@@ -2,6 +2,7 @@ package rozetka.config;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
@@ -19,8 +20,11 @@ public class Config {
         }
         return driver;
     }
-    static void setDriver(WebDriver driver){
-        Config.driver = driver;
+
+    @BeforeMethod
+    public void testsSetUp(String url) {
+        url = "https://rozetka.com.ua";
+        driver.get(url);
     }
 
     @AfterMethod

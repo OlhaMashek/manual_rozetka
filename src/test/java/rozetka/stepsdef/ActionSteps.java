@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import rozetka.config.Config;
+import rozetka.pages.HomePage;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -17,14 +18,13 @@ import static org.openqa.selenium.By.xpath;
 import static org.openqa.selenium.Keys.ENTER;
 import static org.openqa.selenium.Keys.INSERT;
 
-public class ActionSteps extends BaseStep {
-    // private RegistrationPage regstrationPage = new RegistrationPage(TestContext.getDriver());
+public class ActionSteps {
+
 
     @When("Enter in the search field {string} click ENTER")
-    public void enterInTheSearchFieldClickENTER(String arg0) {
-        Config.getDriver().findElement(xpath("//input[@name='search']")).sendKeys("iPhone 12 Pro Max 256GB", ENTER);
-        //sLog4j.logger.info("Searching " + arg0);s
-        Config.getDriver().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+    public void enterInTheSearchFieldClickENTER() {
+      Config.getDriver().findElement(xpath("//input[@name='search']")).sendKeys("iPhone 12 Pro Max 256GB", ENTER);
+      Config.getDriver().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
     }
 
     @And("Click on the first product found")
@@ -37,12 +37,12 @@ public class ActionSteps extends BaseStep {
     }
 
     @And("Check that url contains {string}")
-    public void checkThatUrlContains(String arg0) {
-        assertTrue("FAIL: Url not contains " + arg0, Config.getDriver().getCurrentUrl().contains(arg0));
+    public void checkThatUrlContains(String arg) {
+        assertTrue("FAIL: Url not contains " + arg, Config.getDriver().getCurrentUrl().contains(arg));
     }
 
     @And("Click on the button {string}")
-    public void clickOnTheButton(String arg0) {
+    public void clickOnTheButton() {
         Config.getDriver().findElement(xpath("//*[@class='product__buy']")).click();
         WebDriverWait wait = new WebDriverWait(Config.getDriver(), 30);
     }
@@ -60,17 +60,17 @@ public class ActionSteps extends BaseStep {
     }
 
     @When("Press on the button {string}")
-    public void pressOnTheButton(String arg0) {
+    public void pressOnTheButton() {
         Config.getDriver().findElement(xpath("//*[@class='premium-button__label']")).click();
     }
 
     @When("Click on the icon {string}")
-    public void clickOnTheIcon(String arg0) {
+    public void clickOnTheIcon() {
         Config.getDriver().findElement(xpath("//*[@href='#icon-user-simple']")).click();
     }
 
     @And("Click {string}")
-    public void click(String arg0) {
+    public void click() {
         Config.getDriver().findElement(xpath("//a[@class='auth-modal__register-link']")).click();
     }
 
@@ -90,7 +90,7 @@ public class ActionSteps extends BaseStep {
     }
 
     @And("Click on icon {string}")
-    public void clickOnIcon(String arg0) {
+    public void clickOnIcon() {
         Config.getDriver().findElement(xpath("//button[@class='button button_size_large button_color_green auth-modal__submit']")).click();
     }
 
@@ -100,7 +100,7 @@ public class ActionSteps extends BaseStep {
     }
 
     @And("Click by the checkbox {string}")
-    public void clickByTheCheckbox(String arg0) {
+    public void clickByTheCheckbox() {
         WebElement select = Config.getDriver().findElement(xpath("//*[@class='select-css ng-valid ng-dirty ng-touched']"));
         List<WebElement> options = select.findElements(By.tagName("option"));
         for (WebElement option : options) {
@@ -110,7 +110,7 @@ public class ActionSteps extends BaseStep {
     }
 
     @And("Press on the checkbox {string}")
-    public void pressOnTheCheckbox(String arg0) {
+    public void pressOnTheCheckbox() {
         WebElement select = Config.getDriver().findElement(xpath("//*[@class='select-css ng-valid ng-dirty ng-touched']"));
         List<WebElement> options = select.findElements(By.tagName("option"));
         for (WebElement option : options) {

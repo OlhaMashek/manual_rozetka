@@ -6,15 +6,15 @@ import static org.openqa.selenium.Keys.ENTER;
 import static org.openqa.selenium.Keys.INSERT;
 
 public class HomePage {
-    By searchFieldLocator = By.xpath("//input[@name='search']");
-    By premiumLocator = By.xpath("//*[@class='premium-button__label']");
-    By personalAccountLocator = By.xpath("//*[@href='#icon-user-simple']");
-    By registrationLocator = By.xpath("//a[@class='auth-modal__register-link']");
-    By nameLocator = By.xpath("//input[@formcontrolname='name']");
-    By surnameLocator = By.xpath("//input[@formcontrolname='surname']");
-    By phoneLocator = By.xpath("//input[@formcontrolname='phone']");
-    By passwordLocator = By.xpath("//input[@formcontrolname='password']");
-    By registrationAfterDataEntryLocator = By.xpath("//button[@class='button button_size_large button_color_green auth-modal__submit']");
+    By searchField = By.xpath("//input[@name='search']");
+    By premium = By.xpath("//*[@class='premium-button__label']");
+    By personalAccount = By.xpath("//*[@href='#icon-user-simple']");
+    By registration = By.xpath("//a[@class='auth-modal__register-link']");
+    By firstname = By.xpath("//input[@formcontrolname='name']");
+    By lastname = By.xpath("//input[@formcontrolname='surname']");
+    By phone = By.xpath("//input[@formcontrolname='phone']");
+    By pass = By.xpath("//input[@formcontrolname='password']");
+    By registrationAfterDataEntry = By.xpath("//button[@class='button button_size_large button_color_green auth-modal__submit']");
 
     private final WebDriver driver;
 
@@ -22,48 +22,49 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public HomePage enterInTheSearchFieldClickENTER(String arg0) {
-        driver.findElement(searchFieldLocator).sendKeys("iPhone 12 Pro Max 256GB", ENTER);
+    public HomePage enterInTheSearchFieldClickENTER(String text) {
+        text = "iPhone 12 Pro Max 256GB";
+    driver.findElement(searchField).sendKeys(text, ENTER);
+      return this;
+    }
+
+    public HomePage pressOnTheButton() {
+        driver.findElement(premium).click();
         return this;
     }
 
-    public HomePage pressOnTheButton(String arg0) {
-        driver.findElement(premiumLocator).click();
+    public HomePage clickOnTheIcon() {
+        driver.findElement(personalAccount).click();
         return this;
     }
 
-    public HomePage clickOnTheIcon(String arg0) {
-        driver.findElement(personalAccountLocator).click();
-        return this;
-    }
-
-    public HomePage click(String arg0) {
-        driver.findElement(registrationLocator).click();
+    public HomePage click() {
+        driver.findElement(registration).click();
         return this;
     }
 
     public HomePage enterToNameField(String name) {
-        driver.findElement(nameLocator).sendKeys(name, INSERT);
+        driver.findElement(firstname).sendKeys(name, INSERT);
         return this;
     }
 
     public HomePage enterToLastNameField(String surname) {
-        driver.findElement(surnameLocator).sendKeys(surname, INSERT);
+        driver.findElement(lastname).sendKeys(surname, INSERT);
         return this;
     }
 
     public HomePage enterToPhoneNumberField(String number) {
-        driver.findElement(phoneLocator).sendKeys(number, INSERT);
+        driver.findElement(phone).sendKeys(number, INSERT);
         return this;
     }
 
     public HomePage enterToPasswordField(String password) {
-        driver.findElement(passwordLocator).sendKeys(password, INSERT);
+        driver.findElement(pass).sendKeys(password, INSERT);
         return this;
     }
 
-    public HomePage clickOnIcon(String arg0) {
-        driver.findElement(registrationAfterDataEntryLocator).click();
+    public HomePage clickOnIcon() {
+        driver.findElement(registrationAfterDataEntry).click();
         return this;
     }
 }
