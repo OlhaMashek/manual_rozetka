@@ -74,12 +74,17 @@ public class AssertionsSteps {
 
     @Then("Sorting items from cheap to expensive is displayed")
     public void sortingItemsFromCheapToExpensiveIsDisplayed() {
+        boolean res = false;
         List<WebElement> expensiveToCheapList = driver.findElements(xpath("//p[@class='goods-tile__price-value']"));
         for (int i = 0; i >= 3; i++) {
             System.out.println(expensiveToCheapList.get(i).getText());
             int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
             int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i-1).getText());
-            assert(firstItemPrice>=secondItemPrice);
+            if (firstItemPrice>=secondItemPrice){
+                res = true;
+                return;
+            }
         }
+        assert(res);
     }
 }

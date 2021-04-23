@@ -1,0 +1,9 @@
+rozetka/RunCucumberTest.class
+rozetka/pages/HomePage.class
+rozetka/Log4j.class
+rozetka/pages/SearchPage.class
+rozetka/config/Config.class
+rozetka/stepsdef/ActionSteps.class
+rozetka/stepsdef/AssertionsSteps.class
+rozetka/pages/ItemPage.class
+rozetka/stepsdef/GivenSteps.class
