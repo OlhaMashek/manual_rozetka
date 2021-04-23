@@ -15,6 +15,7 @@ public class HomePage {
     By phone = By.xpath("//input[@formcontrolname='phone']");
     By pass = By.xpath("//input[@formcontrolname='password']");
     By registrationAfterDataEntry = By.xpath("//button[@class='button button_size_large button_color_green auth-modal__submit']");
+    By searchEmpty = By.xpath("//input[@name='search']");
 
     private final WebDriver driver;
 
@@ -22,50 +23,45 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public HomePage enterInTheSearchFieldClickENTER(String text) {
+    public void enterInTheSearchField(String text) {
         text = "iPhone 12 Pro Max 256GB";
     driver.findElement(searchField).sendKeys(text, ENTER);
-      return this;
     }
 
-    public HomePage pressOnTheButton() {
+    public void pressOnTheButtonPremium() {
         driver.findElement(premium).click();
-        return this;
     }
 
-    public HomePage clickOnTheIcon() {
+    public void enterToPersonalAccount() {
         driver.findElement(personalAccount).click();
-        return this;
     }
 
-    public HomePage click() {
+    public void pressOnTheButtonRegistration() {
         driver.findElement(registration).click();
-        return this;
     }
 
-    public HomePage enterToNameField(String name) {
+    public void enterToName(String name) {
         driver.findElement(firstname).sendKeys(name, INSERT);
-        return this;
     }
 
-    public HomePage enterToLastNameField(String surname) {
+    public void enterToLastName(String surname) {
         driver.findElement(lastname).sendKeys(surname, INSERT);
-        return this;
     }
 
-    public HomePage enterToPhoneNumberField(String number) {
+    public void enterToPhoneNumber(String number) {
         driver.findElement(phone).sendKeys(number, INSERT);
-        return this;
     }
 
-    public HomePage enterToPasswordField(String password) {
+    public void enterToPassword(String password) {
         driver.findElement(pass).sendKeys(password, INSERT);
-        return this;
     }
 
-    public HomePage clickOnIcon() {
+    public void clickOnRegistrationAfterDataEntry() {
         driver.findElement(registrationAfterDataEntry).click();
-        return this;
+    }
+
+    public void enterTextOnTheSearchField(String text) {
+        driver.findElement(searchEmpty).sendKeys(text, INSERT);
     }
 }
 

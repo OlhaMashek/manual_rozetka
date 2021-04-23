@@ -14,14 +14,13 @@ public class ItemPage {
         this.driver = driver;
     }
 
-    public ItemPage clickOnTheBuyButton(String arg0) {
+    public ItemPage clickBuyFirstItem() {
         driver.findElement(buyFirstItem).click();
         return this;
     }
 
-    public ItemPage closeTheDisplayedPopUp(String arg0) {
+    public ItemPage closePopUp() {
         driver.findElement(closePopUpWithBuyButton).click();
         return this;
     }
-
 }

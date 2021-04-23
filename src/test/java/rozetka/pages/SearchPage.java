@@ -28,7 +28,7 @@ public class SearchPage {
         return this;
     }
 
-    public SearchPage clickByTheCheckbox() {
+    public SearchPage clickExpensiveToCheep() {
         WebElement select = driver.findElement(sortingExpensiveToCheep);
         List<WebElement> options = select.findElements(By.tagName("option"));
         for (WebElement option : options) {
@@ -38,7 +38,7 @@ public class SearchPage {
         return this;
     }
 
-    public SearchPage pressOnTheCheckbox() {
+    public SearchPage clickCheepToExpensive() {
         WebElement select = driver.findElement(sortingCheepToExpensive);
         List<WebElement> options = select.findElements(By.tagName("option"));
         for (WebElement option : options) {

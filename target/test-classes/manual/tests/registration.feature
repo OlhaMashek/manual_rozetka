@@ -1,7 +1,8 @@
 Feature: INCORRECT REGISTRATION
   Scenario Outline: Check error display without entering email
-    # HomePage.java
+    # BaseStep.java
     Given Url of "https://rozetka.com.ua" is open
+      # HomePage.java
     When Click on the icon "Войти в личный кабинет"
     And Click "Зарегистрироваться"
     And Enter "<name>" to Name field

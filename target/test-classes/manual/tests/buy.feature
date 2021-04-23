@@ -1,7 +1,8 @@
 Feature: BUY
   Scenario: Check correct item added to the cart
-    # HomePage.java
+    # BaseStep.java
     Given Url of "https://rozetka.com.ua" is open
+      #HomePage.java
     When Enter in the search field "iPhone 12 Pro Max 256GB" click ENTER
     # SearchPage.java
     And Click on the first product found
