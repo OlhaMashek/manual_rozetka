@@ -10,7 +10,7 @@ import java.util.List;
 
 public class SearchPage {
 
-    By firstItem = By.xpath("//a[@class='goods-tile__picture']");
+    By firstItem = By.xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[2]/section/rz-grid/ul/li[1]/app-goods-tile-default/div/div[2]");
     By sortingExpensiveToCheep = By.xpath("//*[@class='select-css ng-valid ng-dirty ng-touched']");
     By sortingCheepToExpensive = By.xpath("//*[@class='select-css ng-valid ng-dirty ng-touched']");
 
@@ -20,31 +20,28 @@ public class SearchPage {
         this.driver = driver;
     }
 
-    public SearchPage clickOnTheFirstProductFound() {
+    public void clickFirstProduct() {
         List<WebElement> elementsList = Collections.singletonList(driver.findElement(firstItem));
         WebDriverWait wait = new WebDriverWait(driver, 5000000);
         wait.until(ExpectedConditions.visibilityOfAllElements(elementsList));
         elementsList.get(0).click();
-        return this;
     }
 
-    public SearchPage clickExpensiveToCheep() {
+    public void clickExpensiveToCheep() {
         WebElement select = driver.findElement(sortingExpensiveToCheep);
         List<WebElement> options = select.findElements(By.tagName("option"));
         for (WebElement option : options) {
             if ("От дорогих к дешевым".equals(option.getText().trim()))
                 option.click();
         }
-        return this;
     }
 
-    public SearchPage clickCheepToExpensive() {
+    public void clickCheepToExpensive() {
         WebElement select = driver.findElement(sortingCheepToExpensive);
         List<WebElement> options = select.findElements(By.tagName("option"));
         for (WebElement option : options) {
             if ("sortingCheepToExpensiveLocator".equals(option.getText().trim()))
                 option.click();
         }
-        return this;
     }
 }

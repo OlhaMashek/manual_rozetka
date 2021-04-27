@@ -3,11 +3,12 @@ Feature: BUY
     # BaseStep.java
     Given Url of "https://rozetka.com.ua" is open
       #HomePage.java
-    When Enter in the search field "iPhone 12 Pro Max 256GB" click ENTER
+    When Enter in the search field "iPhone 12 Pro Max 256GB"
     # SearchPage.java
     And Click on the first product found
     # ItemPage.java
+    #todo Add waite "toBeClickable"
     And Click on the Buy button
     And Close the displayed pop-up
     # HomePage.java
-    Then The item with title "iPhone" displayed in the cart
+    Then The item with count "1" displayed on the cart icon

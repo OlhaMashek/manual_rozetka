@@ -4,4 +4,4 @@ Feature: ROZETKA PREMIUM
     Given Url of "https://rozetka.com.ua" is open
     #HomePage.java
     When Press on the button "Попробуйте PREMIUM"
-    Then Button "Оформить подписку" is displayed
+    Then Button is displayed

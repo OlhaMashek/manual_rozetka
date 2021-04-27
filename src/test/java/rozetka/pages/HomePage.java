@@ -1,21 +1,24 @@
 package rozetka.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
+import static org.openqa.selenium.By.xpath;
 import static org.openqa.selenium.Keys.ENTER;
 import static org.openqa.selenium.Keys.INSERT;
 
 public class HomePage {
     By searchField = By.xpath("//input[@name='search']");
     By premium = By.xpath("//*[@class='premium-button__label']");
-    By personalAccount = By.xpath("//*[@href='#icon-user-simple']");
-    By registration = By.xpath("//a[@class='auth-modal__register-link']");
+    By personalAccount = By.xpath("/html/body/app-root/div/div[1]/rz-header/header/div/div/ul/li[3]/rz-user/button");
+    By registration = By.xpath("//a[@class='auth-modal__register-link ng-star-inserted']");
     By firstname = By.xpath("//input[@formcontrolname='name']");
     By lastname = By.xpath("//input[@formcontrolname='surname']");
     By phone = By.xpath("//input[@formcontrolname='phone']");
     By pass = By.xpath("//input[@formcontrolname='password']");
     By registrationAfterDataEntry = By.xpath("//button[@class='button button_size_large button_color_green auth-modal__submit']");
     By searchEmpty = By.xpath("//input[@name='search']");
+    By counter = By.xpath("//span[@class='counter counter--green ng-star-inserted']");
 
     private final WebDriver driver;
 
@@ -28,16 +31,19 @@ public class HomePage {
     driver.findElement(searchField).sendKeys(text, ENTER);
     }
 
-    public void pressOnTheButtonPremium() {
+    public void pressOnTheButtonPremium(String s) {
+        s = "Попробуйте PREMIUM";
         driver.findElement(premium).click();
     }
 
-    public void enterToPersonalAccount() {
+    public void enterToPersonalAccount(String a) {
+        a = "Войти в личный кабинет";
         driver.findElement(personalAccount).click();
     }
 
-    public void pressOnTheButtonRegistration() {
-        driver.findElement(registration).click();
+    public void pressOnTheButtonRegistration(String b) {
+        b = "Зарегистрироваться";
+       driver.findElement(registration).click();
     }
 
     public void enterToName(String name) {
@@ -56,12 +62,18 @@ public class HomePage {
         driver.findElement(pass).sendKeys(password, INSERT);
     }
 
-    public void clickOnRegistrationAfterDataEntry() {
+    public void clickOnRegistrationAfterDataEntry(String p) {
+        p = "Зарегистрироваться";
         driver.findElement(registrationAfterDataEntry).click();
     }
 
     public void enterTextOnTheSearchField(String text) {
         driver.findElement(searchEmpty).sendKeys(text, INSERT);
+    }
+
+    public String getActualProductsCountInCart() {
+        WebElement countElement = driver.findElement(counter);
+        return countElement.getText();
     }
 }
 

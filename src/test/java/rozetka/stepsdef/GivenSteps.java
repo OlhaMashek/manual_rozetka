@@ -7,8 +7,9 @@ public class GivenSteps {
 
     private final WebDriver driver = Config.getDriver();
 
+
     @Given("Url of {string} is open")
-    public void urlOfIsOpen(String store_url) {
-        driver.get(store_url);
+    public void urlOfIsOpen(String storeUrl) {
+        driver.get(storeUrl);
     }
 }

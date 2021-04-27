@@ -3,27 +3,30 @@ package rozetka.stepsdef;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import rozetka.config.Config;
+import rozetka.pages.HomePage;
+import rozetka.pages.ItemPage;
+import rozetka.pages.SearchPage;
+
 import java.util.List;
 import static org.junit.Assert.*;
 import static org.openqa.selenium.By.xpath;
 
 public class AssertionsSteps {
 
-    private final WebDriver driver;
+    private final WebDriver driver = Config.getDriver();;
+    HomePage homePage = new HomePage(driver);
+    ItemPage itemPage = new ItemPage(driver);
+    SearchPage searchPage = new SearchPage(driver);
 
-    public AssertionsSteps(WebDriver driver) {
-        this.driver = driver;
-    }
 
-    @Then("The item with title {string} displayed in the cart")
-    public void theItemWithTitleDisplayedInTheCart() {
-        String actualProductsCountInCart =
-                driver.findElement(xpath("//button[@class='header__button header__button--active']")).getText();
-        assertEquals(actualProductsCountInCart, "1");
+    @Then("The item with count {string} displayed on the cart icon")
+    public void theItemWithTitleDisplayedInTheCart(String count) {
+        assertEquals(homePage.getActualProductsCountInCart(), count);
 
     }
 
-    @Then("Button {string} is displayed")
+    @Then("Button is displayed")
     public void buttonIsDisplayed() {
         boolean textFound = false;
         try {

@@ -3,7 +3,7 @@ Feature: SORTING
     # BaseStep.java
     Given Url of "https://rozetka.com.ua" is open
     # HomePage.java
-    When Enter in the search field "iPhone 12 Pro Max 256GB" click ENTER
+    When Enter in the search field "iPhone 12 Pro Max 256GB"
      # SearchPage.java
     And Click by the checkbox "От дорогих к дешевым"
     Then Sorting items from expensive to cheap is displayed
@@ -12,7 +12,7 @@ Feature: SORTING
     # BaseStep.java
     Given Url of "https://rozetka.com.ua" is open
     # HomePage.java
-    When Enter in the search field "iPhone 12 Pro Max 256GB" click ENTER
+    When Enter in the search field "iPhone 12 Pro Max 256GB"
     # SearchPage.java
     And Press on the checkbox "От дешевых к дорогим"
     Then Sorting items from cheap to expensive is displayed

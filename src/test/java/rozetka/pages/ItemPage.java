@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class ItemPage {
 
-    By buyFirstItem = By.xpath("//button[@class='buy-button button button_with_icon button_color_green button_size_large']");
-    By closePopUpWithBuyButton = By.xpath("//button[@class='modal__close']");
+    By buyButton = By.xpath("//button[contains(@class, 'button_color_green button_size_large')]");
+    By closePopUpWithBuyButton = By.xpath("//button[@class='modal__close ng-star-inserted']"); //modal__close ng-star-inserted
 
     private final WebDriver driver;
 
@@ -14,13 +14,12 @@ public class ItemPage {
         this.driver = driver;
     }
 
-    public ItemPage clickBuyFirstItem() {
-        driver.findElement(buyFirstItem).click();
-        return this;
+    public void clickBuyFirstItem() {
+
+        driver.findElement(buyButton).click();
     }
 
-    public ItemPage closePopUp() {
+    public void closePopUp() {
         driver.findElement(closePopUpWithBuyButton).click();
-        return this;
     }
 }
