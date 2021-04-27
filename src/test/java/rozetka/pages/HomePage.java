@@ -19,6 +19,8 @@ public class HomePage {
     By registrationAfterDataEntry = By.xpath("//button[@class='button button_size_large button_color_green auth-modal__submit']");
     By searchEmpty = By.xpath("//input[@name='search']");
     By counter = By.xpath("//span[@class='counter counter--green ng-star-inserted']");
+    By buttonSubscribe = By.xpath("//*[contains(text(),'Оформить подписку')]");
+    By errorIsDisplayed = By.xpath("//*[contains(text(),'Введите свою эл. почту')]");
 
     private final WebDriver driver;
 
@@ -74,6 +76,18 @@ public class HomePage {
     public String getActualProductsCountInCart() {
         WebElement countElement = driver.findElement(counter);
         return countElement.getText();
+    }
+
+    public boolean getButtonIsDisplayed(){
+        WebElement web = driver.findElement(buttonSubscribe);
+        boolean bool = web.isDisplayed();
+        return bool;
+    }
+
+    public boolean getAnErrorIsDisplayed() {
+        WebElement error = driver.findElement(errorIsDisplayed);
+        boolean errorMistake = error.isDisplayed();
+        return errorMistake;
     }
 }
 

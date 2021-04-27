@@ -1,6 +1,7 @@
 package rozetka.stepsdef;
 
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import rozetka.config.Config;
@@ -28,24 +29,13 @@ public class AssertionsSteps {
 
     @Then("Button is displayed")
     public void buttonIsDisplayed() {
-        boolean textFound = false;
-        try {
-            driver.findElement(xpath("//*[contains(text(),'Оформить подписку')]"));
-            textFound = true;
-        } catch (Exception e) {
-            textFound = false;
-        }
+        assertEquals(homePage.getButtonIsDisplayed(), true);
     }
 
     @Then("An error {string} is displayed")
-    public void anErrorIsDisplayed() {
-        boolean text = false;
-        try {
-            driver.findElement(xpath("//*[contains(text(),'Введите свою эл. почту')]"));
-            text = true;
-        } catch (Exception e) {
-            text = false;
-        }
+    public void anErrorIsDisplayed(String t) {
+        t = "Введите свою эл. почту";
+        assertEquals(homePage.getAnErrorIsDisplayed(), true);
     }
 
     @Then("Error is displayed {string}")
