@@ -21,6 +21,7 @@ public class HomePage {
     By counter = By.xpath("//span[@class='counter counter--green ng-star-inserted']");
     By buttonSubscribe = By.xpath("//*[contains(text(),'Оформить подписку')]");
     By errorIsDisplayed = By.xpath("//*[contains(text(),'Введите свою эл. почту')]");
+    By errorRequestEmpty = By.xpath("//*[contains(text(),'По вашему запросу ничего не найдено.')]");
 
     private final WebDriver driver;
 
@@ -88,6 +89,12 @@ public class HomePage {
         WebElement error = driver.findElement(errorIsDisplayed);
         boolean errorMistake = error.isDisplayed();
         return errorMistake;
+    }
+
+    public boolean getErrorIsDisplayed() {
+        WebElement requestEmpty = driver.findElement(errorRequestEmpty);
+        boolean errorErrorEmpty = requestEmpty.isDisplayed();
+        return errorErrorEmpty;
     }
 }
 

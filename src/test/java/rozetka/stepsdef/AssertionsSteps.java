@@ -39,14 +39,9 @@ public class AssertionsSteps {
     }
 
     @Then("Error is displayed {string}")
-    public void errorIsDisplayed() {
-        boolean message = false;
-        try {
-            driver.findElement(xpath("//*[contains(text(),'По вашему запросу ничего не найдено. Уточните свой запрос')]"));
-            message = true;
-        } catch (Exception e) {
-            message = false;
-        }
+    public void errorIsDisplayed(String k) {
+        k = "По вашему запросу ничего не найдено";
+        assertEquals(homePage.getErrorIsDisplayed(), true);
     }
 
     @Then("Sorting items from expensive to cheap is displayed")
