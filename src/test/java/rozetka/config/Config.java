@@ -1,19 +1,15 @@
 package rozetka.config;
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-
 import java.util.concurrent.TimeUnit;
-
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
 public class Config {
     private static WebDriver driver;
 
-    @BeforeTest
+    @Before
     public static WebDriver getDriver(){
         if (driver==null)
         {
@@ -26,7 +22,6 @@ public class Config {
         return driver;
     }
 
-    @BeforeMethod
     public void testsSetUp(String url) {
         url = "https://rozetka.com.ua";
         driver.get(url);
@@ -35,5 +30,6 @@ public class Config {
     @After
     public void tearDown() {
         driver.close();
+        driver.quit();
     }
 }

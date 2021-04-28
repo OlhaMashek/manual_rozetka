@@ -1,6 +1,7 @@
 package rozetka.stepsdef;
 
 import io.cucumber.java.en.Then;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.WebDriver;
 import rozetka.config.Config;
 import rozetka.pages.HomePage;
@@ -17,7 +18,6 @@ public class AssertionsSteps {
     @Then("The item with count {string} displayed on the cart icon")
     public void theItemWithTitleDisplayedInTheCart(String count) {
         assertEquals(homePage.getActualProductsCountInCart(), count);
-
     }
 
     @Then("Button is displayed")
