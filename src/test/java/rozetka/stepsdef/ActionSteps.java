@@ -63,16 +63,6 @@ public class ActionSteps {
         homePage.enterTextOnTheSearchField(text);
     }
 
-    @And("Click by the checkbox {string}")
-    public void clickByTheCheckbox() {
-        searchPage.clickExpensiveToCheep();
-    }
-
-    @And("Press on the checkbox {string}")
-    public void pressOnTheCheckbox() {
-        searchPage.clickCheepToExpensive();
-    }
-
     @And("Click on the Buy button")
     public void clickOnTheBuyButton() {
         itemPage.clickBuyFirstItem();
@@ -96,5 +86,15 @@ public class ActionSteps {
     @And("Click on icon {string}")
     public void clickOnIcon(String p) {
         homePage.clickOnRegistrationAfterDataEntry(p);
+    }
+
+    @And("Click by the checkbox {string}")
+    public void clickByTheCheckbox(String q) {
+        searchPage.clickExpensiveToCheep(q);
+    }
+
+    @And("Press on the checkbox {string}")
+    public void pressOnTheCheckbox(String y) {
+        searchPage.clickCheepToExpensive(y);
     }
 }

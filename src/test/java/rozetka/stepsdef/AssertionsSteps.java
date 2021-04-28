@@ -1,23 +1,16 @@
 package rozetka.stepsdef;
 
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import rozetka.config.Config;
 import rozetka.pages.HomePage;
-import rozetka.pages.ItemPage;
 import rozetka.pages.SearchPage;
-
-import java.util.List;
 import static org.junit.Assert.*;
-import static org.openqa.selenium.By.xpath;
 
 public class AssertionsSteps {
 
-    private final WebDriver driver = Config.getDriver();;
+    private final WebDriver driver = Config.getDriver();
     HomePage homePage = new HomePage(driver);
-    ItemPage itemPage = new ItemPage(driver);
     SearchPage searchPage = new SearchPage(driver);
 
 
@@ -45,34 +38,14 @@ public class AssertionsSteps {
     }
 
     @Then("Sorting items from expensive to cheap is displayed")
-    public void sortingItemsFromExpensiveToCheapIsDisplayed() {
-        boolean result = false;
-        List<WebElement> expensiveToCheapList = driver.findElements(xpath("//p[@class='goods-tile__price-value']"));
-        for (int i = 0; i >= 3; i++) {
-            System.out.println(expensiveToCheapList.get(i).getText());
-            int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
-            int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i+1).getText());
-                    if (firstItemPrice>=secondItemPrice){
-                        result = true;
-                        return;
-            }
-        }
-        assert(result);
+    public boolean sortingItemsFromExpensiveToCheapIsDisplayed() {
+        searchPage.getSortingItemsFromExpensiveToCheap();
+        return true;
     }
 
     @Then("Sorting items from cheap to expensive is displayed")
-    public void sortingItemsFromCheapToExpensiveIsDisplayed() {
-        boolean res = false;
-        List<WebElement> expensiveToCheapList = driver.findElements(xpath("//p[@class='goods-tile__price-value']"));
-        for (int i = 0; i >= 3; i++) {
-            System.out.println(expensiveToCheapList.get(i).getText());
-            int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
-            int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i-1).getText());
-            if (firstItemPrice>=secondItemPrice){
-                res = true;
-                return;
-            }
-        }
-        assert(res);
+    public boolean sortingItemsFromCheapToExpensiveIsDisplayed() {
+        searchPage.getSortingItemsFromCheapToExpensive();
+        return true;
     }
 }

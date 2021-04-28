@@ -1,7 +1,8 @@
 package rozetka.config;
+import io.cucumber.java.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
+//import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
@@ -31,7 +32,7 @@ public class Config {
         driver.get(url);
     }
 
-    @AfterMethod
+    @After
     public void tearDown() {
         driver.close();
     }
