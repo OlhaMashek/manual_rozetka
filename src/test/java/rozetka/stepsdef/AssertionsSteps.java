@@ -1,7 +1,6 @@
 package rozetka.stepsdef;
 
 import io.cucumber.java.en.Then;
-import io.qameta.allure.Allure;
 import org.openqa.selenium.WebDriver;
 import rozetka.config.Config;
 import rozetka.pages.HomePage;

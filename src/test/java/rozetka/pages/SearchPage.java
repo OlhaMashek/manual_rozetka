@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.Collections;
 import java.util.List;
+import org.apache.log4j.Logger;
 
 public class SearchPage {
 
@@ -17,6 +18,7 @@ public class SearchPage {
     By displayedSorting = By.xpath("//p[@class='goods-tile__price-value']");
 
     private final WebDriver driver;
+    private static final Logger log = Logger.getLogger(String.valueOf(SearchPage.class));
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
@@ -27,6 +29,7 @@ public class SearchPage {
         WebDriverWait wait = new WebDriverWait(driver, 5000000);
         wait.until(ExpectedConditions.visibilityOfAllElements(elementsList));
         elementsList.get(0).click();
+        log.info("Clicking on the first finding element");
     }
 
     public void clickExpensiveToCheep(String q) {
@@ -35,6 +38,7 @@ public class SearchPage {
         Select select = new Select(selectElem);
         select.selectByVisibleText("От дорогих к дешевым");
         select.selectByIndex(2);
+        log.info("Clicking on the sort button from expensive to cheep");
     }
 
     public void clickCheepToExpensive(String y) {
@@ -43,13 +47,15 @@ public class SearchPage {
         Select select = new Select(selectElem);
         select.selectByVisibleText("От дешевых к дорогим");
         select.selectByIndex(1);
+        log.info("Clicking on the sort button from cheep to expensive");
     }
 
     public void getSortingItemsFromExpensiveToCheap() {
         boolean result = false;
         List<WebElement> expensiveToCheapList = driver.findElements(displayedSorting);
+        log.debug("Initial displayed order of price");
         for (int i = 0; i >= 3; i++) {
-            System.out.println(expensiveToCheapList.get(i).getText());
+            log.debug(expensiveToCheapList.get(i).getText());
             int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
             int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i + 1).getText());
             if (firstItemPrice >= secondItemPrice) {
@@ -62,11 +68,12 @@ public class SearchPage {
 
     public void getSortingItemsFromCheapToExpensive() {
         boolean res = false;
-        List<WebElement> expensiveToCheapList = driver.findElements(displayedSorting);
+        List<WebElement> cheepToExpensiveList = driver.findElements(displayedSorting);
+        log.debug("Initial displayed order of price");
         for (int i = 0; i >= 3; i++) {
-            System.out.println(expensiveToCheapList.get(i).getText());
-            int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
-            int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i - 1).getText());
+            log.debug(cheepToExpensiveList.get(i).getText());
+            int firstItemPrice = Integer.parseInt(cheepToExpensiveList.get(i).getText());
+            int secondItemPrice = Integer.parseInt(cheepToExpensiveList.get(i - 1).getText());
             if (firstItemPrice >= secondItemPrice) {
                 res = true;
                 return;
