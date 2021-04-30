@@ -4,7 +4,7 @@ Feature: EMPTY SEARCH
     Given Url of "https://rozetka.com.ua" is open
     # HomePage.java
     When Enter "<text>" in search field
-    Then Error is displayed "По вашему запросу ничего не найдено"
+    Then The error is that nothing was found for the request
     Examples:
       | text              |
       | синхрофазотрон    |

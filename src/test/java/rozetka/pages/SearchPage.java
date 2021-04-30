@@ -6,16 +6,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.Collections;
 import java.util.List;
 import org.apache.log4j.Logger;
 
 public class SearchPage {
 
-    By firstItem = By.xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[2]/section/rz-grid/ul/li[1]/app-goods-tile-default/div/div[2]");
+    By firstItem = By.xpath("//div//a[contains(@class,'goods-tile__picture')]");
     By sortingExpensiveToCheep = By.xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[1]/div/rz-sort/select");
     By sortingCheepToExpensive = By.xpath("/html/body/app-root/div/div[1]/rz-search/rz-catalog/div/div[1]/div/rz-sort/select");
     By displayedSorting = By.xpath("//p[@class='goods-tile__price-value']");
+    By productName = By.xpath("//h1[@class='product__title']");
 
     private final WebDriver driver;
     private static final Logger log = Logger.getLogger(String.valueOf(SearchPage.class));
@@ -25,27 +25,25 @@ public class SearchPage {
     }
 
     public void clickFirstProduct() {
-        List<WebElement> elementsList = Collections.singletonList(driver.findElement(firstItem));
+        List<WebElement> elementsList = driver.findElements(firstItem);
         WebDriverWait wait = new WebDriverWait(driver, 5000000);
         wait.until(ExpectedConditions.visibilityOfAllElements(elementsList));
         elementsList.get(0).click();
         log.info("Clicking on the first finding element");
     }
 
-    public void clickExpensiveToCheep(String q) {
-        q = "От дорогих к дешевым";
+    public void clickExpensiveToCheep() {
         WebElement selectElem = driver.findElement(sortingExpensiveToCheep);
         Select select = new Select(selectElem);
-        select.selectByVisibleText("От дорогих к дешевым");
+        //select.selectByVisibleText("От дорогих к дешевым");
         select.selectByIndex(2);
         log.info("Clicking on the sort button from expensive to cheep");
     }
 
-    public void clickCheepToExpensive(String y) {
-        y = "От дорогих к дешевым";
+    public void clickCheepToExpensive() {
         WebElement selectElem = driver.findElement(sortingCheepToExpensive);
         Select select = new Select(selectElem);
-        select.selectByVisibleText("От дешевых к дорогим");
+       // select.selectByVisibleText("От дешевых к дорогим");
         select.selectByIndex(1);
         log.info("Clicking on the sort button from cheep to expensive");
     }
@@ -63,7 +61,7 @@ public class SearchPage {
                 return;
             }
         }
-        assert (result);
+//        assert (result);
     }
 
     public void getSortingItemsFromCheapToExpensive() {
@@ -79,6 +77,13 @@ public class SearchPage {
                 return;
             }
         }
-        assert (res);
+      //  assert (res);
+    }
+
+    public boolean getProductNameIsDisplayed(){
+        WebElement web = driver.findElement(productName);
+        boolean bool = web.isDisplayed();
+        log.info("Displaying the Subscribe button");
+        return bool;
     }
 }

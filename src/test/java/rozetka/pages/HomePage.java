@@ -15,7 +15,7 @@ public class HomePage {
     By lastname = By.xpath("//input[@formcontrolname='surname']");
     By phone = By.xpath("//input[@formcontrolname='phone']");
     By pass = By.xpath("//input[@formcontrolname='password']");
-    By registrationAfterDataEntry = By.xpath("//button[@class='button button_size_large button_color_green auth-modal__submit']");
+    By registrationAfterDataEntry = By.xpath("//button[@class='button button--large button--green auth-modal__submit']");
     By searchEmpty = By.xpath("//input[@name='search']");
     By counter = By.xpath("//span[@class='counter counter--green ng-star-inserted']");
     By buttonSubscribe = By.xpath("//*[contains(text(),'Оформить подписку')]");
@@ -35,8 +35,7 @@ public class HomePage {
         log.info("Starting entering query");
     }
 
-    public void pressOnTheButtonPremium(String s) {
-        s = "Попробуйте PREMIUM";
+    public void pressOnTheButtonPremium() {
         driver.findElement(premium).click();
         log.info("Opening Premium page");
     }
@@ -76,8 +75,7 @@ public class HomePage {
     }
 
 
-    public void clickOnRegistrationAfterDataEntry(String p) {
-        p = "Зарегистрироваться";
+    public void clickOnRegistrationAfterDataEntry() {
         driver.findElement(registrationAfterDataEntry).click();
         log.info("Registration after filling in the fields");
     }
@@ -108,8 +106,8 @@ public class HomePage {
     }
 
     public boolean getErrorIsDisplayed() {
-        WebElement requestEmpty = driver.findElement(errorRequestEmpty);
-        boolean errorErrorEmpty = requestEmpty.isDisplayed();
+       // WebElement requestEmpty = driver.findElement(errorRequestEmpty);
+        boolean errorErrorEmpty = driver.findElement(errorRequestEmpty).isDisplayed();
         log.info("Displaying a message stating that nothing was found for the request");
         return errorErrorEmpty;
     }

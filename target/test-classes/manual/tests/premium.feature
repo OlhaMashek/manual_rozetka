@@ -3,5 +3,5 @@ Feature: ROZETKA PREMIUM
     # BaseStep.java
     Given Url of "https://rozetka.com.ua" is open
     #HomePage.java
-    When Press on the button "Попробуйте PREMIUM"
+    When Click on the button Try Premium
     Then Button is displayed

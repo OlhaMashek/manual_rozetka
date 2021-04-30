@@ -6,8 +6,8 @@ Feature: BUY
     When Enter in the search field "iPhone 12 Pro Max 256GB"
     # SearchPage.java
     And Click on the first product found
+    And Check for a search query in the title
     # ItemPage.java
-    #todo Add waite "toBeClickable"
     And Click on the Buy button
     And Close the displayed pop-up
     # HomePage.java

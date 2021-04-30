@@ -5,7 +5,7 @@ Feature: SORTING
     # HomePage.java
     When Enter in the search field "iPhone 12 Pro Max 256GB"
      # SearchPage.java
-    And Click by the checkbox "От дорогих к дешевым"
+    And Press the sort button from expensive to cheap
     Then Sorting items from expensive to cheap is displayed
 
   Scenario: 2 Check the sorting of items by price from cheap to expensive
@@ -14,5 +14,5 @@ Feature: SORTING
     # HomePage.java
     When Enter in the search field "iPhone 12 Pro Max 256GB"
     # SearchPage.java
-    And Press on the checkbox "От дешевых к дорогим"
+    And Press the sort button from cheap to expensive
     Then Sorting items from cheap to expensive is displayed
