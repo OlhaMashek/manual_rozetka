@@ -35,7 +35,6 @@ public class SearchPage {
     public void clickExpensiveToCheep() {
         WebElement selectElem = driver.findElement(sortingExpensiveToCheep);
         Select select = new Select(selectElem);
-        //select.selectByVisibleText("От дорогих к дешевым");
         select.selectByIndex(2);
         log.info("Clicking on the sort button from expensive to cheep");
     }
@@ -43,7 +42,6 @@ public class SearchPage {
     public void clickCheepToExpensive() {
         WebElement selectElem = driver.findElement(sortingCheepToExpensive);
         Select select = new Select(selectElem);
-       // select.selectByVisibleText("От дешевых к дорогим");
         select.selectByIndex(1);
         log.info("Clicking on the sort button from cheep to expensive");
     }
@@ -61,7 +59,6 @@ public class SearchPage {
                 return;
             }
         }
-//        assert (result);
     }
 
     public void getSortingItemsFromCheapToExpensive() {
@@ -77,7 +74,6 @@ public class SearchPage {
                 return;
             }
         }
-      //  assert (res);
     }
 
     public boolean getProductNameIsDisplayed(){

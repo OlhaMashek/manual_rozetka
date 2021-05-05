@@ -17,12 +17,6 @@ public class AssertionsSteps {
     HomePage homePage = new HomePage(driver);
     SearchPage searchPage = new SearchPage(driver);
 
-
-    @Then("The item with count {string} displayed on the cart icon")
-    public void theItemWithTitleDisplayedInTheCart(String count) {
-        assertEquals(homePage.getActualProductsCountInCart(), count);
-    }
-
     @Then("Button is displayed")
     public void buttonIsDisplayed() {
         assertEquals(homePage.getButtonIsDisplayed(), true);
@@ -48,5 +42,10 @@ public class AssertionsSteps {
     @Then("The error is that nothing was found for the request")
     public void theErrorIsThatNothingWasFoundForTheRequest() {
         assertEquals(homePage.getErrorIsDisplayed(), true);
+    }
+
+    @Then("Reverse the display of the cart")
+    public void reverseTheDisplayOfTheCart() {
+        assertEquals(homePage.getReverseTheDisplayOfTheCart(), true);
     }
 }

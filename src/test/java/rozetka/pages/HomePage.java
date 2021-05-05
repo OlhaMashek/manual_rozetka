@@ -1,7 +1,6 @@
 package rozetka.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.apache.log4j.Logger;
 import static org.openqa.selenium.Keys.ENTER;
 import static org.openqa.selenium.Keys.INSERT;
@@ -17,10 +16,11 @@ public class HomePage {
     By pass = By.xpath("//input[@formcontrolname='password']");
     By registrationAfterDataEntry = By.xpath("//button[@class='button button--large button--green auth-modal__submit']");
     By searchEmpty = By.xpath("//input[@name='search']");
-    By counter = By.xpath("//span[@class='counter counter--green ng-star-inserted']");
     By buttonSubscribe = By.xpath("//*[contains(text(),'Оформить подписку')]");
     By errorIsDisplayed = By.xpath("//*[contains(text(),'Введите свою эл. почту')]");
     By errorRequestEmpty = By.xpath("//*[contains(text(),'По вашему запросу ничего не найдено.')]");
+    By buttonCart = By.xpath("//button[contains(@class, 'header__button ng-star-inserted header__button--active')]");
+    By itemInCart = By.xpath("//a[contains(@class, 'cart-product__title')]");
 
     private final WebDriver driver;
     private static final Logger log = Logger.getLogger(String.valueOf(HomePage.class));
@@ -40,14 +40,12 @@ public class HomePage {
         log.info("Opening Premium page");
     }
 
-    public void enterToPersonalAccount(String a) {
-        a = "Войти в личный кабинет";
+    public void enterToPersonalAccount() {
         driver.findElement(personalAccount).click();
         log.info("Entering to personal account");
     }
 
-    public void pressOnTheButtonRegistration(String b) {
-        b = "Зарегистрироваться";
+    public void pressOnTheButtonRegistration() {
        driver.findElement(registration).click();
        log.info("Starting to registration");
     }
@@ -85,30 +83,32 @@ public class HomePage {
         log.info("Entering data into the search field");
     }
 
-    public String getActualProductsCountInCart() {
-        WebElement countElement = driver.findElement(counter);
-        log.info("The number 1 is displayed in the cart");
-        return countElement.getText();
-    }
-
     public boolean getButtonIsDisplayed(){
-        WebElement web = driver.findElement(buttonSubscribe);
-        boolean bool = web.isDisplayed();
+        boolean bool = driver.findElement(buttonSubscribe).isDisplayed();
         log.info("Displaying the Subscribe button");
         return bool;
     }
 
     public boolean getAnErrorIsDisplayed() {
-        WebElement error = driver.findElement(errorIsDisplayed);
-        boolean errorMistake = error.isDisplayed();
+        boolean errorMistake = driver.findElement(errorIsDisplayed).isDisplayed();
         log.info("Email field is not filled");
         return errorMistake;
     }
 
     public boolean getErrorIsDisplayed() {
-       // WebElement requestEmpty = driver.findElement(errorRequestEmpty);
         boolean errorErrorEmpty = driver.findElement(errorRequestEmpty).isDisplayed();
         log.info("Displaying a message stating that nothing was found for the request");
         return errorErrorEmpty;
+    }
+
+    public void getClickOnTheCartButton() {
+        driver.findElement(buttonCart).click();
+        log.info("Displaying the cart window");
+    }
+
+    public boolean getReverseTheDisplayOfTheCart() {
+        boolean itemIsDisplayed = driver.findElement(itemInCart).isDisplayed();
+        log.info("Displaying an item in the cart");
+        return itemIsDisplayed;
     }
 }

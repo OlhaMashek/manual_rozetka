@@ -100,7 +100,7 @@
                 <configuration>
                     <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
                     <reportVersion>2.0.1</reportVersion>
-                    <reportTimeout>300</reportTimeout>
+                    <reportTimeout>1000</reportTimeout>
                 </configuration>
             </plugin>
 

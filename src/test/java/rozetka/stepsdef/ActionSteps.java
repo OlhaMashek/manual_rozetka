@@ -67,16 +67,6 @@ public class ActionSteps {
         itemPage.clickBuyFirstItem();
     }
 
-    @When("Click on the icon {string}")
-    public void clickOnTheIcon(String a) {
-        homePage.enterToPersonalAccount(a);
-    }
-
-    @And("Click {string}")
-    public void click(String b) {
-        homePage.pressOnTheButtonRegistration(b);
-    }
-
     @And("Check for a search query in the title")
     public void checkForASearchQueryInTheTitle() {
         assertEquals(searchPage.getProductNameIsDisplayed(), true);
@@ -100,5 +90,20 @@ public class ActionSteps {
     @And("Click on the Register button")
     public void clickOnTheRegisterButton() {
         homePage.clickOnRegistrationAfterDataEntry();
+    }
+
+    @And("Click to register")
+    public void clickToRegister() {
+        homePage.pressOnTheButtonRegistration();
+    }
+
+    @When("Login to your personal account")
+    public void loginToYourPersonalAccount() {
+        homePage.enterToPersonalAccount();
+    }
+
+    @And("Click on the cart button")
+    public void clickOnTheCartButton() {
+        homePage.getClickOnTheCartButton();
     }
 }
