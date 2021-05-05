@@ -572,9 +572,9 @@ jQuery.cookie = function(name, value, options) {
     <body>
         <div id="container">
             <div id="header">
-                <div class="time" xmlns="">3 m 33 s</div>
+                <div class="time" xmlns="">4 m 12 s</div>
                 <h1>
-                    RunCucumberTest: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">8 total, </span><span class="passed">8 passed</span></strong>
+                    RunCucumberTest: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">8 total, </span><span class="error">1 error, </span><span class="passed">7 passed</span></strong>
                 </h1>
                 <div id="treecontrol">
                     <ul>
@@ -591,775 +591,729 @@ jQuery.cookie = function(name, value, options) {
             </div>
             <div id="content">
                 <ul id="tree">
-                    /Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home/bin/java -ea -DnodeNamesHandler=org.jetbrains.plugins.cucumber.java.run.CucumberTestTreeNodeManager -Didea.test.cyclic.buffer.size=1048576 -javaagent:/Applications/IntelliJ IDEA CE 2.app/Contents/lib/idea_rt.jar=61234:/Applications/IntelliJ IDEA CE 2.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Applications/IntelliJ IDEA CE 2.app/Contents/lib/idea_rt.jar:/Applications/IntelliJ IDEA CE 2.app/Contents/plugins/junit/lib/junit5-rt.jar:/Applications/IntelliJ IDEA CE 2.app/Contents/plugins/junit/lib/junit-rt.jar:/Users/olamasek/ manual_rozetka/target/test-classes:/Users/olamasek/.m2/repository/io/cucumber/cucumber-java/6.8.1/cucumber-java-6.8.1.jar:/Users/olamasek/.m2/repository/io/cucumber/cucumber-core/6.8.1/cucumber-core-6.8.1.jar:/Users/olamasek/.m2/repository/io/cucumber/cucumber-gherkin/6.8.1/cucumber-gherkin-6.8.1.jar:/Users/olamasek/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.8.1/cucumber-gherkin-messages-6.8.1.jar:/Users/olamasek/.m2/repository/io/cucumber/messages/13.1.0/messages-13.1.0.jar:/Users/olamasek/.m2/repository/io/cucumber/tag-expressions/3.0.0/tag-expressions-3.0.0.jar:/Users/olamasek/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/olamasek/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/olamasek/.m2/repository/io/cucumber/cucumber-plugin/6.8.1/cucumber-plugin-6.8.1.jar:/Users/olamasek/.m2/repository/io/cucumber/docstring/6.8.1/docstring-6.8.1.jar:/Users/olamasek/.m2/repository/io/cucumber/html-formatter/9.0.0/html-formatter-9.0.0.jar:/Users/olamasek/.m2/repository/io/cucumber/create-meta/2.0.2/create-meta-2.0.2.jar:/Users/olamasek/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/olamasek/.m2/repository/io/cucumber/cucumber-junit/6.8.1/cucumber-junit-6.8.1.jar:/Users/olamasek/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/olamasek/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/olamasek/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/olamasek/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/olamasek/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/olamasek/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/olamasek/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/olamasek/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/olamasek/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/olamasek/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/olamasek/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/olamasek/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/olamasek/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/olamasek/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/olamasek/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/olamasek/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/olamasek/.m2/repository/io/github/bonigarcia/webdrivermanager/4.3.1/webdrivermanager-4.3.1.jar:/Users/olamasek/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/olamasek/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar:/Users/olamasek/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/olamasek/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/olamasek/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/olamasek/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/olamasek/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0.2/httpcore5-h2-5.0.2.jar:/Users/olamasek/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/olamasek/.m2/repository/org/rauschig/jarchivelib/1.1.0/jarchivelib-1.1.0.jar:/Users/olamasek/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar:/Users/olamasek/.m2/repository/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar:/Users/olamasek/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/olamasek/.m2/repository/org/testng/testng/7.4.0/testng-7.4.0.jar:/Users/olamasek/.m2/repository/com/beust/jcommander/1.78/jcommander-1.78.jar:/Users/olamasek/.m2/repository/org/webjars/jquery/3.5.1/jquery-3.5.1.jar:/Users/olamasek/.m2/repository/io/qameta/allure/allure-junit4/2.13.9/allure-junit4-2.13.9.jar:/Users/olamasek/.m2/repository/io/qameta/allure/allure-java-commons/2.13.9/allure-java-commons-2.13.9.jar:/Users/olamasek/.m2/repository/io/qameta/allure/allure-model/2.13.9/allure-model-2.13.9.jar:/Users/olamasek/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.12.2/jackson-databind-2.12.2.jar:/Users/olamasek/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.12.2/jackson-annotations-2.12.2.jar:/Users/olamasek/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.12.2/jackson-core-2.12.2.jar:/Users/olamasek/.m2/repository/org/apache/tika/tika-core/1.25/tika-core-1.25.jar:/Users/olamasek/.m2/repository/org/jooq/joor-java-8/0.9.13/joor-java-8-0.9.13.jar:/Users/olamasek/Library/Application Support/JetBrains/IdeaIC2020.3/plugins/cucumber-java/lib/cucumber-jvmFormatter.jar com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit4 rozetka.RunCucumberTest
- src/test/resources/cucumber.properties:          
-cucumber.publish.enabled
-=
-true
-    
-│
-│
- src/test/resources/junit-platform.properties:    
-cucumber.publish.enabled
-=
-true
-    
-│
-│
- Environment variable:                            
-CUCUMBER_PUBLISH_ENABLED
-=
-true
-    
-│
-│
- JUnit:                                           
-@CucumberOptions
-(publish = 
-true
-) 
-│
-│
-                                                                                   
-│
-│
- More information at 
-https://reports.cucumber.io/docs/cucumber-jvm
-                 
-│
-│
-                                                                                   
-│
-│
- Disable this message with one of the following:                                   
-│
-│
-                                                                                   
-│
-│
- src/test/resources/cucumber.properties:          
-cucumber.publish.quiet
-=
-true
-      
-│
-│
- src/test/resources/junit-platform.properties:    
-cucumber.publish.quiet
-=
-true
-      
-│
-└───────────────────────────────────────────────────────────────────────────────────┘
-Process finished with exit code 0
-
-                    <li xmlns="" class="level top open">
+                    <li xmlns="" class="level top failed open">
                         <span><em class="time">
-                                <div class="time">50.78 s</div>
-                            </em>BUY</span>
+                                <div class="time">4 m 12 s</div>
+                            </em>RunCucumberTest</span>
                         <ul>
-                            <li class="level test">
+                            <li class="level suite failed open">
                                 <span><em class="time">
-                                        <div class="time">50.78 s</div>
-                                    </em><em class="status">passed</em>BUY.Check correct item added to the cart</span>
+                                        <div class="time">19.58 s</div>
+                                    </em>BUY</span>
                                 <ul>
-                                    <li class="text">
-                                        <span class="stdout">Scenario: Check correct item added to the cart             <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># src/test/resources/manual/tests/buy.feature:2<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stderr">SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.<br/>SLF4J: Defaulting to no-operation (NOP) logger implementation<br/>SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.<br/>Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 38315<br/>Only local connections are allowed.<br/>Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.<br/>ChromeDriver was started successfully.<br/>апр. 30, 2021 5:24:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession<br/>INFO: Detected dialect: W3C<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Given Url of <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> is open<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">            <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:20 PM]:INFO rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35)Starting entering query<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">When Enter in the search field <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;iPhone 12 Pro Max 256GB&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInTheSearchField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:21 PM]:INFO rozetka.pages.SearchPage.clickFirstProduct(SearchPage.java:32)Clicking on the first finding element<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Click on the first product found<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                     <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheFirstProductFound()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:25 PM]:INFO rozetka.pages.SearchPage.getProductNameIsDisplayed(SearchPage.java:86)Displaying the Subscribe button<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Check for a search query in the title<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.checkForASearchQueryInTheTitle()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:25 PM]:INFO rozetka.pages.ItemPage.clickBuyFirstItem(ItemPage.java:21)Clicking the buy button<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Click on the Buy button<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                              <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheBuyButton()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:32 PM]:INFO rozetka.pages.ItemPage.closePopUp(ItemPage.java:26)Closing a pop-up with information about the selected product<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Close the displayed pop-up<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                           <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.closeTheDisplayedPopUp()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:32 PM]:INFO rozetka.pages.HomePage.getActualProductsCountInCart(HomePage.java:90)The number 1 is displayed in the cart<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Then The item with count <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;1&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> displayed on the cart icon<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theItemWithTitleDisplayedInTheCart(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
+                                    <li class="level test failed open">
+                                        <span><em class="time">
+                                                <div class="time">19.58 s</div>
+                                            </em><em class="status">error</em>Check correct item added to the cart</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Scenario: Check correct item added to the cart             <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># src/test/resources/manual/tests/buy.feature:2<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 45918<br/>Only local connections are allowed.<br/>Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.<br/>ChromeDriver was started successfully.<br/>мая 05, 2021 2:30:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession<br/>INFO: Detected dialect: W3C<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Given Url of <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> is open<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">            <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:13 PM]:INFO rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35)Starting entering query<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">When Enter in the search field <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;iPhone 12 Pro Max 256GB&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInTheSearchField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:14 PM]:INFO rozetka.pages.SearchPage.clickFirstProduct(SearchPage.java:32)Clicking on the first finding element<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Click on the first product found<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                     <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheFirstProductFound()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:17 PM]:INFO rozetka.pages.SearchPage.getProductNameIsDisplayed(SearchPage.java:82)Displaying the Subscribe button<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Check for a search query in the title<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.checkForASearchQueryInTheTitle()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Click on the Buy button<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                              <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheBuyButton()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">      <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-rz-client-c52=&quot;&quot; class=&quot;buy-button button button_with_icon button_color_green button_size_large ng-star-inserted&quot; opencart=&quot;&quot; type=&quot;button&quot; aria-label=&quot;Купить&quot;&gt;...&lt;/button&gt; is not clickable at point (970, 561). Other element would receive the click: &lt;img _ngcontent-rz-client-c66=&quot;&quot; class=&quot;zoom-img&quot; alt=&quot;Мобильный телефон Apple iPhone 12 Pro Max 256GB Pacific Blue Официальная гарантия&quot; src=&quot;https://content2.rozetka.com.ua/goods/images/original/30873095.jpg&quot; style=&quot;width: 1320px; height: 1800px; transform: translate(-306.803px, 0px);&quot;&gt;<br/>  (Session info: chrome=90.0.4430.93)<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;MacBook-Air-Ola.local&#39;, ip: &#39;fe80:0:0:0:4fe:b0cd:f01a:16ff%en0&#39;, os.name: &#39;Mac OS X&#39;, os.arch: &#39;x86_64&#39;, os.version: &#39;10.16&#39;, java.version: &#39;15.0.2&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: /var/folders/gn/b8gbshgn2kl...}, goog:chromeOptions: {debuggerAddress: localhost:64149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}<br/>Session ID: 86aab1aa192971eb4687c345ceacd78e<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br/>	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)<br/>	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)<br/>	at rozetka.pages.ItemPage.clickBuyFirstItem(ItemPage.java:20)<br/>	at rozetka.stepsdef.ActionSteps.clickOnTheBuyButton(ActionSteps.java:67)<br/>	at ✽.Click on the Buy button(file:///Users/olamasek/%20manual_rozetka/src/test/resources/manual/tests/buy.feature:11)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Close the displayed pop-up<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                           <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.closeTheDisplayedPopUp()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Click on the cart button<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                             <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheCartButton()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Then Reverse the display of the cart<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                     <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.AssertionsSteps.reverseTheDisplayOfTheCart()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-rz-client-c52=&quot;&quot; class=&quot;buy-button button button_with_icon button_color_green button_size_large ng-star-inserted&quot; opencart=&quot;&quot; type=&quot;button&quot; aria-label=&quot;Купить&quot;&gt;...&lt;/button&gt; is not clickable at point (970, 561). Other element would receive the click: &lt;img _ngcontent-rz-client-c66=&quot;&quot; class=&quot;zoom-img&quot; alt=&quot;Мобильный телефон Apple iPhone 12 Pro Max 256GB Pacific Blue Официальная гарантия&quot; src=&quot;https://content2.rozetka.com.ua/goods/images/original/30873095.jpg&quot; style=&quot;width: 1320px; height: 1800px; transform: translate(-306.803px, 0px);&quot;&gt;<br/>  (Session info: chrome=90.0.4430.93)<br/>Build info: version: &#39;3.141.59&#39;, revision: &#39;e82be7d358&#39;, time: &#39;2018-11-14T08:17:03&#39;<br/>System info: host: &#39;MacBook-Air-Ola.local&#39;, ip: &#39;fe80:0:0:0:4fe:b0cd:f01a:16ff%en0&#39;, os.name: &#39;Mac OS X&#39;, os.arch: &#39;x86_64&#39;, os.version: &#39;10.16&#39;, java.version: &#39;15.0.2&#39;<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: /var/folders/gn/b8gbshgn2kl...}, goog:chromeOptions: {debuggerAddress: localhost:64149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}<br/>Session ID: 86aab1aa192971eb4687c345ceacd78e<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br/>	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br/>	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br/>	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br/>	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br/>	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)<br/>	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)<br/>	at rozetka.pages.ItemPage.clickBuyFirstItem(ItemPage.java:20)<br/>	at rozetka.stepsdef.ActionSteps.clickOnTheBuyButton(ActionSteps.java:67)<br/>	at ✽.Click on the Buy button(file:///Users/olamasek/%20manual_rozetka/src/test/resources/manual/tests/buy.feature:11)<br/></span>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
-                    </li>
-                    <li class="level top open">
-                        <span><em class="time">
-                                <div class="time">10.20 s</div>
-                            </em>ROZETKA PREMIUM</span>
-                        <ul>
-                            <li class="level test">
+                            <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">10.20 s</div>
-                                    </em><em class="status">passed</em>ROZETKA PREMIUM.Check the button for subscribing</span>
+                                        <div class="time">4.34 s</div>
+                                    </em>ROZETKA PREMIUM</span>
                                 <ul>
-                                    <li class="text">
-                                        <span class="stdout">Scenario: Check the button for subscribing      <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># src/test/resources/manual/tests/premium.feature:2<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Given Url of <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> is open<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:41 PM]:INFO rozetka.pages.HomePage.pressOnTheButtonPremium(HomePage.java:40)Opening Premium page<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">When Click on the button Try Premium<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">          <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheButtonTryPremium()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:43 PM]:INFO rozetka.pages.HomePage.getButtonIsDisplayed(HomePage.java:97)Displaying the Subscribe button<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Then Button is displayed<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                      <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.AssertionsSteps.buttonIsDisplayed()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">4.34 s</div>
+                                            </em><em class="status">passed</em>Check the button for subscribing</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Scenario: Check the button for subscribing      <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># src/test/resources/manual/tests/premium.feature:2<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Given Url of <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> is open<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:26 PM]:INFO rozetka.pages.HomePage.pressOnTheButtonPremium(HomePage.java:40)Opening Premium page<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">When Click on the button Try Premium<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">          <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheButtonTryPremium()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:27 PM]:INFO rozetka.pages.HomePage.getButtonIsDisplayed(HomePage.java:88)Displaying the Subscribe button<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Then Button is displayed<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                      <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.AssertionsSteps.buttonIsDisplayed()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
-                    </li>
-                    <li class="level top open">
-                        <span><em class="time">
-                                <div class="time">5.60 s</div>
-                            </em>INCORRECT REGISTRATION</span>
-                        <ul>
-                            <li class="level test">
+                            <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">5.60 s</div>
-                                    </em><em class="status">passed</em>INCORRECT REGISTRATION.Check error display without entering email</span>
+                                        <div class="time">4.35 s</div>
+                                    </em>INCORRECT REGISTRATION</span>
                                 <ul>
-                                    <li class="text">
-                                        <span class="stdout">Scenario: Check error display without entering email           <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># src/test/resources/manual/tests/registration.feature:2<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Given Url of <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> is open<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:46 PM]:INFO rozetka.pages.HomePage.enterToPersonalAccount(HomePage.java:46)Entering to personal account<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">When Click on the icon <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;Войти в личный кабинет&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">              <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheIcon(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:47 PM]:INFO rozetka.pages.HomePage.pressOnTheButtonRegistration(HomePage.java:52)Starting to registration<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Click <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;Зарегистрироваться&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                               <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.click(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:47 PM]:INFO rozetka.pages.HomePage.enterToName(HomePage.java:57)Cyrillic name input<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Enter <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;Влад&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> to Name field<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                               <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterToNameField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:47 PM]:INFO rozetka.pages.HomePage.enterToLastName(HomePage.java:62)Cyrillic surname input<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Enter <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;Иванов&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> to Last name field<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                        <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterToLastNameField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:48 PM]:INFO rozetka.pages.HomePage.enterToPhoneNumber(HomePage.java:67)Number input mask +38<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Enter <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;&lt;0972222222&gt;&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> to Phone number field<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">               <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterToPhoneNumberField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:48 PM]:INFO rozetka.pages.HomePage.enterToPassword(HomePage.java:72)The password must be at least 6 characters long, contain numbers and Latin letters, including capital letters, and must not coincide with the name and e-mail<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Enter <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;&lt;A1111111111a&gt;&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> to password field<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                 <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterToPasswordField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:48 PM]:INFO rozetka.pages.HomePage.clickOnRegistrationAfterDataEntry(HomePage.java:80)Registration after filling in the fields<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Click on the Register button<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                             <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheRegisterButton()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:48 PM]:INFO rozetka.pages.HomePage.getAnErrorIsDisplayed(HomePage.java:104)Email field is not filled<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Then The error that you need to enter the email is displayed<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theErrorThatYouNeedToEnterTheEmailIsDisplayed()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">4.35 s</div>
+                                            </em><em class="status">passed</em>Check error display without entering email</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Scenario: Check error display without entering email           <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># src/test/resources/manual/tests/registration.feature:2<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Given Url of <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> is open<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:30 PM]:INFO rozetka.pages.HomePage.enterToPersonalAccount(HomePage.java:45)Entering to personal account<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">When Login to your personal account<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                          <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.loginToYourPersonalAccount()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:30 PM]:INFO rozetka.pages.HomePage.pressOnTheButtonRegistration(HomePage.java:50)Starting to registration<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Click to register<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                                        <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.clickToRegister()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:30 PM]:INFO rozetka.pages.HomePage.enterToName(HomePage.java:55)Cyrillic name input<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Enter <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;Влад&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> to Name field<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                               <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterToNameField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:31 PM]:INFO rozetka.pages.HomePage.enterToLastName(HomePage.java:60)Cyrillic surname input<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Enter <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;Иванов&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> to Last name field<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                        <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterToLastNameField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:31 PM]:INFO rozetka.pages.HomePage.enterToPhoneNumber(HomePage.java:65)Number input mask +38<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Enter <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;&lt;0972222222&gt;&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> to Phone number field<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">               <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterToPhoneNumberField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:31 PM]:INFO rozetka.pages.HomePage.enterToPassword(HomePage.java:70)The password must be at least 6 characters long, contain numbers and Latin letters, including capital letters, and must not coincide with the name and e-mail<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Enter <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;&lt;A1111111111a&gt;&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> to password field<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                 <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterToPasswordField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:32 PM]:INFO rozetka.pages.HomePage.clickOnRegistrationAfterDataEntry(HomePage.java:78)Registration after filling in the fields<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Click on the Register button<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                             <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.clickOnTheRegisterButton()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:32 PM]:INFO rozetka.pages.HomePage.getAnErrorIsDisplayed(HomePage.java:94)Email field is not filled<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Then The error that you need to enter the email is displayed<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theErrorThatYouNeedToEnterTheEmailIsDisplayed()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
-                    </li>
-                    <li class="level top open">
-                        <span><em class="time">
-                                <div class="time">17.48 s</div>
-                            </em>EMPTY SEARCH</span>
-                        <ul>
-                            <li class="level test">
+                            <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">5.09 s</div>
-                                    </em><em class="status">passed</em>EMPTY SEARCH.Check that search result is empty for irrelevant search queries #1</span>
+                                        <div class="time">9.11 s</div>
+                                    </em>EMPTY SEARCH</span>
                                 <ul>
-                                    <li class="text">
-                                        <span class="stdout">Scenario Outline: Check that search result is empty for irrelevant search queries <br/></span>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">2.91 s</div>
+                                            </em><em class="status">passed</em>Check that search result is empty for irrelevant search queries #1</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Scenario Outline: Check that search result is empty for irrelevant search queries <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># src/test/resources/manual/tests/search.feature:10<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Given Url of <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> is open<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                                   <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:39 PM]:INFO rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:83)Entering data into the search field<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">When Enter <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;синхрофазотрон&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> in search field<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                                     <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInSearchField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:40 PM]:INFO rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:100)Displaying a message stating that nothing was found for the request<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Then The error is that nothing was found for the request<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                        <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theErrorIsThatNothingWasFoundForTheRequest()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li class="text">
-                                        <span class="stdout"># src/test/resources/manual/tests/search.feature:10<br/></span>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">3.15 s</div>
+                                            </em><em class="status">passed</em>Check that search result is empty for irrelevant search queries #2</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Scenario Outline: Check that search result is empty for irrelevant search queries <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># src/test/resources/manual/tests/search.feature:11<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Given Url of <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> is open<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                                   <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:42 PM]:INFO rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:83)Entering data into the search field<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">When Enter <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;зілля невидимості&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> in search field<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                                  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInSearchField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:43 PM]:INFO rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:100)Displaying a message stating that nothing was found for the request<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Then The error is that nothing was found for the request<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                        <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theErrorIsThatNothingWasFoundForTheRequest()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Given Url of <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> is open<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                                   <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:53 PM]:INFO rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:85)Entering data into the search field<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">When Enter <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;синхрофазотрон&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> in search field<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                                     <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInSearchField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:53 PM]:INFO rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:111)Displaying a message stating that nothing was found for the request<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Then The error is that nothing was found for the request<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                        <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theErrorIsThatNothingWasFoundForTheRequest()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">3.05 s</div>
+                                            </em><em class="status">passed</em>Check that search result is empty for irrelevant search queries #3</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Scenario Outline: Check that search result is empty for irrelevant search queries <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># src/test/resources/manual/tests/search.feature:12<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Given Url of <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> is open<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                                   <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:50 PM]:INFO rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:83)Entering data into the search field<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">When Enter <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;індульгенція&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> in search field<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                                       <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInSearchField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:51 PM]:INFO rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:100)Displaying a message stating that nothing was found for the request<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Then The error is that nothing was found for the request<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                        <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theErrorIsThatNothingWasFoundForTheRequest()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="level test">
+                            <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">7.98 s</div>
-                                    </em><em class="status">passed</em>EMPTY SEARCH.Check that search result is empty for irrelevant search queries #2</span>
+                                        <div class="time">3 m 35 s</div>
+                                    </em>SORTING</span>
                                 <ul>
-                                    <li class="text">
-                                        <span class="stdout">Scenario Outline: Check that search result is empty for irrelevant search queries <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># src/test/resources/manual/tests/search.feature:11<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Given Url of <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> is open<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                                   <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:25:57 PM]:INFO rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:85)Entering data into the search field<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">When Enter <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;зілля невидимості&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> in search field<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                                  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInSearchField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:26:01 PM]:INFO rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:111)Displaying a message stating that nothing was found for the request<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Then The error is that nothing was found for the request<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                        <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theErrorIsThatNothingWasFoundForTheRequest()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="level test">
-                                <span><em class="time">
-                                        <div class="time">4.41 s</div>
-                                    </em><em class="status">passed</em>EMPTY SEARCH.Check that search result is empty for irrelevant search queries #3</span>
-                                <ul>
-                                    <li class="text">
-                                        <span class="stdout">Scenario Outline: Check that search result is empty for irrelevant search queries <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># src/test/resources/manual/tests/search.feature:12<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Given Url of <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> is open<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                                   <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:26:05 PM]:INFO rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:85)Entering data into the search field<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">When Enter <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;індульгенція&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> in search field<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                                       <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInSearchField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:26:06 PM]:INFO rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:111)Displaying a message stating that nothing was found for the request<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Then The error is that nothing was found for the request<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                        <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.AssertionsSteps.theErrorIsThatNothingWasFoundForTheRequest()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="level top open">
-                        <span><em class="time">
-                                <div class="time">2 m 9 s</div>
-                            </em>SORTING</span>
-                        <ul>
-                            <li class="level test">
-                                <span><em class="time">
-                                        <div class="time">1 m 2 s</div>
-                                    </em><em class="status">passed</em>SORTING.1 Check the sorting of items by price from expensive to cheap</span>
-                                <ul>
-                                    <li class="text">
-                                        <span class="stdout">Scenario: 1 Check the sorting of items by price from expensive to cheap <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># src/test/resources/manual/tests/sorting.feature:2<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Given Url of <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> is open<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                         <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:26:14 PM]:INFO rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35)Starting entering query<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">When Enter in the search field <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;iPhone 12 Pro Max 256GB&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">              <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInTheSearchField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:26:18 PM]:INFO rozetka.pages.SearchPage.clickExpensiveToCheep(SearchPage.java:40)Clicking on the sort button from expensive to cheep<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Press the sort button from expensive to cheap<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                     <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.pressTheSortButtonFromExpensiveToCheap()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:27:08 PM]:DEBUG rozetka.pages.SearchPage.getSortingItemsFromExpensiveToCheap(SearchPage.java:54)Initial displayed order of price<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Then Sorting items from expensive to cheap is displayed<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">               <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.AssertionsSteps.sortingItemsFromExpensiveToCheapIsDisplayed()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="level test">
-                                <span><em class="time">
-                                        <div class="time">1 m 7 s</div>
-                                    </em><em class="status">passed</em>SORTING.2 Check the sorting of items by price from cheap to expensive</span>
-                                <ul>
-                                    <li class="text">
-                                        <span class="stdout">Scenario: 2 Check the sorting of items by price from cheap to expensive <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># src/test/resources/manual/tests/sorting.feature:11<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Given Url of <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"> is open<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                         <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:27:24 PM]:INFO rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35)Starting entering query<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">When Enter in the search field <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">&quot;iPhone 12 Pro Max 256GB&quot;<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">              <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInTheSearchField(java.lang.String)<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:27:25 PM]:INFO rozetka.pages.SearchPage.clickCheepToExpensive(SearchPage.java:48)Clicking on the sort button from cheep to expensive<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">And Press the sort button from cheap to expensive<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">                     <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.ActionSteps.pressTheSortButtonFromCheapToExpensive()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">[2021-04-30 17:28:15 PM]:DEBUG rozetka.pages.SearchPage.getSortingItemsFromCheapToExpensive(SearchPage.java:70)Initial displayed order of price<br/>  <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">Then Sorting items from cheap to expensive is displayed<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout">               <br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"># rozetka.stepsdef.AssertionsSteps.sortingItemsFromCheapToExpensiveIsDisplayed()<br/></span>
-                                    </li>
-                                    <li class="text">
-                                        <span class="stdout"></span>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">1 m 45 s</div>
+                                            </em><em class="status">passed</em>1 Check the sorting of items by price from expensive to cheap</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Scenario: 1 Check the sorting of items by price from expensive to cheap <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># src/test/resources/manual/tests/sorting.feature:2<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Given Url of <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> is open<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                         <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:53 PM]:INFO rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35)Starting entering query<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">When Enter in the search field <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;iPhone 12 Pro Max 256GB&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">              <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInTheSearchField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:30:56 PM]:INFO rozetka.pages.SearchPage.clickExpensiveToCheep(SearchPage.java:39)Clicking on the sort button from expensive to cheep<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Press the sort button from expensive to cheap<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                     <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.pressTheSortButtonFromExpensiveToCheap()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:32:36 PM]:DEBUG rozetka.pages.SearchPage.getSortingItemsFromExpensiveToCheap(SearchPage.java:52)Initial displayed order of price<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Then Sorting items from expensive to cheap is displayed<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">               <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.AssertionsSteps.sortingItemsFromExpensiveToCheapIsDisplayed()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">1 m 50 s</div>
+                                            </em><em class="status">passed</em>2 Check the sorting of items by price from cheap to expensive</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Scenario: 2 Check the sorting of items by price from cheap to expensive <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># src/test/resources/manual/tests/sorting.feature:11<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Given Url of <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;https://rozetka.com.ua&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"> is open<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                         <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.GivenSteps.urlOfIsOpen(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:32:51 PM]:INFO rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35)Starting entering query<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">When Enter in the search field <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">&quot;iPhone 12 Pro Max 256GB&quot;<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">              <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.enterInTheSearchField(java.lang.String)<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:32:51 PM]:INFO rozetka.pages.SearchPage.clickCheepToExpensive(SearchPage.java:46)Clicking on the sort button from cheep to expensive<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">And Press the sort button from cheap to expensive<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">                     <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.ActionSteps.pressTheSortButtonFromCheapToExpensive()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">[2021-05-05 14:34:31 PM]:DEBUG rozetka.pages.SearchPage.getSortingItemsFromCheapToExpensive(SearchPage.java:67)Initial displayed order of price<br/>  <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Then Sorting items from cheap to expensive is displayed<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">               <br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"># rozetka.stepsdef.AssertionsSteps.sortingItemsFromCheapToExpensiveIsDisplayed()<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout"></span>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
@@ -1369,7 +1323,7 @@ Process finished with exit code 0
             </div>
         </div>
         <div id="footer">
-            <p>Generated by IntelliJ IDEA on 30.04.2021, 17:28</p>
+            <p>Generated by IntelliJ IDEA on 05.05.2021, 14:37</p>
         </div>
     </body>
 </html>

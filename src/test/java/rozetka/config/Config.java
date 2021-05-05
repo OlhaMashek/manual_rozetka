@@ -16,9 +16,9 @@ public class Config {
             chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-            driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
-            driver.manage().timeouts().setScriptTimeout(50, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+            driver.manage().timeouts().setScriptTimeout(100, TimeUnit.SECONDS);
         }
         return driver;
     }
