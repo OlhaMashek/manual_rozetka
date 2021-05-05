@@ -1,0 +1,52 @@
+2021-05-01 14:05:03 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35) ]
+INFO:Starting entering query
+2021-05-01 14:05:06 PM [Thread: main][ Class:class rozetka.pages.SearchPage >> Method: rozetka.pages.SearchPage.clickFirstProduct(SearchPage.java:32) ]
+INFO:Clicking on the first finding element
+2021-05-01 14:05:12 PM [Thread: main][ Class:class rozetka.pages.SearchPage >> Method: rozetka.pages.SearchPage.getProductNameIsDisplayed(SearchPage.java:86) ]
+INFO:Displaying the Subscribe button
+2021-05-01 14:05:13 PM [Thread: main][ Class:class rozetka.pages.ItemPage >> Method: rozetka.pages.ItemPage.clickBuyFirstItem(ItemPage.java:21) ]
+INFO:Clicking the buy button
+2021-05-01 14:05:17 PM [Thread: main][ Class:class rozetka.pages.ItemPage >> Method: rozetka.pages.ItemPage.closePopUp(ItemPage.java:26) ]
+INFO:Closing a pop-up with information about the selected product
+2021-05-01 14:05:17 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.getActualProductsCountInCart(HomePage.java:90) ]
+INFO:The number 1 is displayed in the cart
+2021-05-01 14:05:20 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.pressOnTheButtonPremium(HomePage.java:40) ]
+INFO:Opening Premium page
+2021-05-01 14:05:22 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.getButtonIsDisplayed(HomePage.java:97) ]
+INFO:Displaying the Subscribe button
+2021-05-01 14:05:25 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterToPersonalAccount(HomePage.java:46) ]
+INFO:Entering to personal account
+2021-05-01 14:05:26 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.pressOnTheButtonRegistration(HomePage.java:52) ]
+INFO:Starting to registration
+2021-05-01 14:05:26 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterToName(HomePage.java:57) ]
+INFO:Cyrillic name input
+2021-05-01 14:05:26 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterToLastName(HomePage.java:62) ]
+INFO:Cyrillic surname input
+2021-05-01 14:05:27 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterToPhoneNumber(HomePage.java:67) ]
+INFO:Number input mask +38
+2021-05-01 14:05:27 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterToPassword(HomePage.java:72) ]
+INFO:The password must be at least 6 characters long, contain numbers and Latin letters, including capital letters, and must not coincide with the name and e-mail
+2021-05-01 14:05:27 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.clickOnRegistrationAfterDataEntry(HomePage.java:80) ]
+INFO:Registration after filling in the fields
+2021-05-01 14:05:28 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.getAnErrorIsDisplayed(HomePage.java:104) ]
+INFO:Email field is not filled
+2021-05-01 14:05:32 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:85) ]
+INFO:Entering data into the search field
+2021-05-01 14:05:33 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:111) ]
+INFO:Displaying a message stating that nothing was found for the request
+2021-05-01 14:05:37 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:85) ]
+INFO:Entering data into the search field
+2021-05-01 14:05:37 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:111) ]
+INFO:Displaying a message stating that nothing was found for the request
+2021-05-01 14:05:40 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterTextOnTheSearchField(HomePage.java:85) ]
+INFO:Entering data into the search field
+2021-05-01 14:05:41 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.getErrorIsDisplayed(HomePage.java:111) ]
+INFO:Displaying a message stating that nothing was found for the request
+2021-05-01 14:05:47 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35) ]
+INFO:Starting entering query
+2021-05-01 14:05:47 PM [Thread: main][ Class:class rozetka.pages.SearchPage >> Method: rozetka.pages.SearchPage.clickExpensiveToCheep(SearchPage.java:40) ]
+INFO:Clicking on the sort button from expensive to cheep
+2021-05-01 14:06:46 PM [Thread: main][ Class:class rozetka.pages.HomePage >> Method: rozetka.pages.HomePage.enterInTheSearchField(HomePage.java:35) ]
+INFO:Starting entering query
+2021-05-01 14:06:46 PM [Thread: main][ Class:class rozetka.pages.SearchPage >> Method: rozetka.pages.SearchPage.clickCheepToExpensive(SearchPage.java:48) ]
+INFO:Clicking on the sort button from cheep to expensive

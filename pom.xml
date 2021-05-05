@@ -12,6 +12,7 @@
     <properties>
         <cucumber.version>6.8.1</cucumber.version>
         <junit.version>4.13</junit.version>
+        <allure.version>2.13.9</allure.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -72,10 +73,9 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit4</artifactId>
+            <artifactId>allure-junit5</artifactId>
             <version>2.13.9</version>
             <scope>test</scope>
         </dependency>
@@ -93,6 +93,17 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+                <configuration>
+                    <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
+                    <reportVersion>2.0.1</reportVersion>
+                    <reportTimeout>300</reportTimeout>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
