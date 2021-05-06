@@ -19,6 +19,7 @@ public class SearchPage {
 
     private final WebDriver driver;
     private static final Logger log = Logger.getLogger(String.valueOf(SearchPage.class));
+    private int[] data;
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
@@ -46,34 +47,30 @@ public class SearchPage {
         log.info("Clicking on the sort button from cheep to expensive");
     }
 
-    public void getSortingItemsFromExpensiveToCheap() {
-        boolean result = false;
-        List<WebElement> expensiveToCheapList = driver.findElements(displayedSorting);
-        log.debug("Initial displayed order of price");
-        for (int i = 0; i >= 3; i++) {
-            log.debug(expensiveToCheapList.get(i).getText());
-            int firstItemPrice = Integer.parseInt(expensiveToCheapList.get(i).getText());
-            int secondItemPrice = Integer.parseInt(expensiveToCheapList.get(i + 1).getText());
-            if (firstItemPrice >= secondItemPrice) {
-                result = true;
-                return;
-            }
+    public static boolean getSortingItemsFromExpensiveToCheap()
+    {
+        int[] data = new int[35];
+        int previous = data[0];
+        for(int i = 1; i < data.length; i++)
+        {
+            if(previous > data[i])
+                return false;
+            previous = data[i];
         }
+        return true;
     }
 
-    public void getSortingItemsFromCheapToExpensive() {
-        boolean res = false;
-        List<WebElement> cheepToExpensiveList = driver.findElements(displayedSorting);
-        log.debug("Initial displayed order of price");
-        for (int i = 0; i >= 3; i++) {
-            log.debug(cheepToExpensiveList.get(i).getText());
-            int firstItemPrice = Integer.parseInt(cheepToExpensiveList.get(i).getText());
-            int secondItemPrice = Integer.parseInt(cheepToExpensiveList.get(i - 1).getText());
-            if (firstItemPrice >= secondItemPrice) {
-                res = true;
-                return;
-            }
+
+    public static boolean getSortingItemsFromCheapToExpensive() {
+        int[] data = new int[35];
+        int previous = data[0];
+        for(int i = 1; i < data.length; i++)
+        {
+            if(previous < data[i])
+                return false;
+            previous = data[i];
         }
+        return true;
     }
 
     public boolean getProductNameIsDisplayed(){

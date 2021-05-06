@@ -2,12 +2,9 @@ package rozetka.stepsdef;
 
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import rozetka.config.Config;
 import rozetka.pages.HomePage;
 import rozetka.pages.SearchPage;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 
