@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: rozetka.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 103.776 s - in rozetka.RunCucumberTest

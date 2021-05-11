@@ -1,0 +1,44 @@
+{
+  "uid" : "87cbfb320f118fcb",
+  "name" : "Check correct item added to the cart",
+  "historyId" : "e56e623bcbce2e5412cf1f0252adfae6",
+  "time" : {
+    "start" : 1620721276997,
+    "stop" : 1620721314993,
+    "duration" : 37996
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "MacBook-Air-Ola.local"
+  }, {
+    "name" : "thread",
+    "value" : "61565@MacBook-Air-Ola.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "87cbfb320f118fcb.json",
+  "parameterValues" : [ ]
+}

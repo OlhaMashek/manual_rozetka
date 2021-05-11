@@ -1,0 +1,44 @@
+{
+  "uid" : "271ae0b16fd49739",
+  "name" : "2 Check the sorting of items by price from cheap to expensive",
+  "historyId" : "7eba85c42ed6b96cdbab6dc56179448b",
+  "time" : {
+    "start" : 1620721369198,
+    "stop" : 1620721375539,
+    "duration" : 6341
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "MacBook-Air-Ola.local"
+  }, {
+    "name" : "thread",
+    "value" : "61565@MacBook-Air-Ola.local.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "271ae0b16fd49739.json",
+  "parameterValues" : [ ]
+}
