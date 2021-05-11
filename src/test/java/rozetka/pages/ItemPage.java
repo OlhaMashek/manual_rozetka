@@ -3,6 +3,9 @@ package rozetka.pages;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ItemPage {
 
@@ -17,6 +20,8 @@ public class ItemPage {
     }
 
     public void clickBuyFirstItem() {
+        WebElement dynamicElement = (new WebDriverWait(driver, 100))
+                .until(ExpectedConditions.presenceOfElementLocated(buyButton));
         driver.findElement(buyButton).click();
         log.info("Clicking the buy button");
     }
